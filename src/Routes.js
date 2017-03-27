@@ -1,15 +1,14 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import {HomePage} from './HomePage/HomePage'
-import {ProjectPage} from './ProjectPage/ProjectPage'
+import HomePage from './HomePage/HomePage'
+import ProjectPage from './ProjectPage/ProjectPage'
 import {ErrorPage} from './ErrorPage/ErrorPage'
 import {AboutPage} from './AboutPage/AboutPage'
 import Header from './components/Layout/Header'
 import {getProjects} from './redux/actions/projects'
 import {connect} from 'react-redux'
 
-@connect(null, { getProjects })
-export class Routes extends React.Component {
+class Routes extends React.Component {
   componentWillMount() {
     this.props.getProjects()
   }
@@ -36,4 +35,4 @@ export class Routes extends React.Component {
   }
 }
 
-
+export default connect(null, { getProjects })(Routes)

@@ -12,6 +12,7 @@
  */
 import {applyMiddleware, combineReducers, compose, createStore} from 'redux'
 import {projects} from './reducers/projects'
+import {visibilityFilter} from './reducers/visibilityFilter'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
@@ -23,6 +24,7 @@ const thunk = store => next => action =>
 
 const reducers = combineReducers({
   projects,
+  visibilityFilter,
 })
 
 export const store = createStore(

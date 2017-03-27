@@ -20,4 +20,3 @@ export class AboutPage extends React.Component {
   }
 
 }
-

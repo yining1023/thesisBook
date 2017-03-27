@@ -7,13 +7,13 @@ export const projects = (state = {}, action) => {
     return {...action.payload}
 
   case actionTypes.GET_PROJECT_SUCCEEDED: {
-    const project = { ...action.payload }
+    const project = { ...action.payload}
 
     // new project received
     // now replace the project with that id with the new one in our object
     return {
       ...state,
-      [project.student_slug]: project,
+      [project.student_slug]: project
     }
   }
 

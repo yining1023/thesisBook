@@ -168,7 +168,7 @@ if (!isDebug) {
 // Hot Module Replacement (HMR) + React Hot Reload
 if (isDebug && useHMR) {
   babelConfig.plugins.unshift('react-hot-loader/babel')
-  babelConfig.plugins.unshift('transform-decorators-legacy')
+  // babelConfig.plugins.unshift('transform-decorators-legacy')
   config.entry.unshift('react-hot-loader/patch', 'webpack-hot-middleware/client')
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
   config.plugins.push(new webpack.NoEmitOnErrorsPlugin())

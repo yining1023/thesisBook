@@ -11,8 +11,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const actions = { getProject }
 
-@connect(mapStateToProps, actions)
-export class ProjectPage extends React.Component {
+class ProjectPage extends React.Component {
 
   // static propTypes = {
   //   project: PropTypes.shape({
@@ -65,16 +64,18 @@ export class ProjectPage extends React.Component {
         <p dangerouslySetInnerHTML={{ __html: this.props.project.description }} />
         <p dangerouslySetInnerHTML={{ __html: this.props.project.further_reading }} />
 
-        <p>
+        <div>
           {this.props.project.slide_show.map(slide =>
-            <p key={slide.title}>
+            <div key={slide.title}>
               <img rel="external" src={slide.src} />
               <p>{slide.caption}</p>
-            </p>
+            </div>
           )}
-        </p>
+        </div>
       </div>
     )
   }
 
 }
+
+export default connect(mapStateToProps, actions)(ProjectPage)
