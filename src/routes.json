@@ -1,0 +1,31 @@
+[
+  {
+    "path": "/",
+    "page": "./home",
+    "chunk": "main",
+    "data": {
+      "articles": "GET https://itp.nyu.edu/ranch/proxy/proxy.php?mode=native&url=https://itp.nyu.edu/thesis2016/wp-content/themes/itpthesis/api2.php?student_id=-1"
+    }
+  },
+  {
+    "path": "/error",
+    "page": "./error",
+    "chunk": "main"
+  },
+  {
+    "path": "/about",
+    "page": "./about"
+  },
+  {
+    "path": "/tasks/:status(pending|completed)?",
+    "page": "./home"
+  },
+  {
+    "path": "/project/:id",
+    "page": "./project",
+    "chunk": "main",
+    "data": {
+      "project": "GET https://itp.nyu.edu/ranch/proxy/proxy.php?mode=native&url=https://itp.nyu.edu/thesis2016/wp-content/themes/itpthesis/api2.php?student_id=$id"
+    }
+  }
+]
