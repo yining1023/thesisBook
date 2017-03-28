@@ -83,9 +83,23 @@ class HomePage extends React.Component {
             autoWidth={false}
           >
             <MenuItem value='' primaryText='' />
+            <MenuItem value='artdrawing' primaryText='ART/DRAWING' />
+            <MenuItem value='assistive-techhealth' primaryText='ASSISTIVE TECH/HEALTH' />
+            <MenuItem value='data-vizimage-processing' primaryText='DATA VIZ/IMAGE PROCESSING' />
+            <MenuItem value='education' primaryText='EDUCATION' />
             <MenuItem value='hardware-product-design' primaryText='HARDWARE/PRODUCT DESIGN' />
+            <MenuItem value='immersive-environments' primaryText='IMMERSIVE ENVIRONMENTS' />
+            <MenuItem value='installation' primaryText='INSTALLATION' />
+            <MenuItem value='mobilesocial-media' primaryText='MOBILE/SOCIAL MEDIA' />
+            <MenuItem value='musicsound' primaryText='MUSIC/SOUND' />
+            <MenuItem value='performance' primaryText='PERFORMANCE' />
+            <MenuItem value='social-goodjusticepolitics' primaryText='SOCIAL GOOD/JUSTICE POLITICS' />
+            <MenuItem value='software-design' primaryText='SOFTWARE DESIGN' />
+            <MenuItem value='speculative-design' primaryText='SPECULATIVE DESIGN' />
             <MenuItem value='storytelling' primaryText='STORYTELLING' />
+            <MenuItem value='timelight' primaryText='TIME/LIGHT' />
             <MenuItem value='uiux' primaryText='UI/UX' />
+            <MenuItem value='wearables' primaryText='WEARABLES' />
           </SelectField>
         </div>
 
