@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom'
 import FastClick from 'fastclick'
 import {App} from './App'
 import {AppContainer} from 'react-hot-loader'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
 // let routes = require('./routes.json').default // Loaded with utils/routes-loader.js
 
@@ -23,6 +24,7 @@ const render = Component =>
 // For more information visit https://github.com/ReactJSTraining/history/tree/master/docs#readme
 // history.listen(render)
 
+injectTapEventPlugin()
 render(App)
 
 // Eliminates the 300ms delay between a physical tap

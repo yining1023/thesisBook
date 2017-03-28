@@ -9,10 +9,6 @@ export const getProjects = () => dispatch => {
 
       // convert array of projects to object by id
       const byId = reduce(response.data, (acc, project) => {
-        // make project.category = project.topics[0].name
-        let topic = {...[...project.topics][0]}
-        project.category = topic.name
-
         acc[project.student_slug] = project
         return acc
       }, {})

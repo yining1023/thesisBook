@@ -2,7 +2,7 @@ import React from 'react'
 import s from './styles.css'
 import {connect} from 'react-redux'
 import {getProject} from '../redux/actions/projects'
-import {selectProject} from '../redux/selectors/selectProject'
+import {selectProject} from '../redux/selectors/projects'
 import {isEqual} from 'lodash'
 
 const mapStateToProps = (state, ownProps) => ({
