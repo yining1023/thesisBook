@@ -1,0 +1,19 @@
+@media screen and (max-width: 1024px) {
+  .content {
+    padding: 0 16px;
+  }
+}
+
+.projectList {
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+.projectTile {
+  list-style: none;
+  display: inline-block;
+  height: 300px;
+  background: #3f51b5;
+  margin: 5px;
+  width: 100px;
+}

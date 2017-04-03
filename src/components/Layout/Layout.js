@@ -8,7 +8,7 @@ class Layout extends React.Component {
 
   static propTypes = {
     className: PropTypes.string,
-  };
+  }
 
   componentDidMount() {
     window.componentHandler.upgradeElement(this.root)

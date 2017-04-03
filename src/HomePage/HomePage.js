@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './styles.css'
+import s from './HomePage.css'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import SelectField from 'material-ui/SelectField'
@@ -51,6 +51,11 @@ class HomePage extends React.Component {
       return this.props.search(event.target.value)
     }
     return this.props.resetSearch()
+  }
+
+  mapScroll(e) {
+    this.list.scrollLeft -= e.deltaX + e.deltaY
+    e.preventDefault()
   }
 
   render() {
@@ -110,9 +115,9 @@ class HomePage extends React.Component {
         />
 
         <h4>Projects</h4>
-        <ul>
+        <ul ref={(elem) => {this.list = elem} } className={s.projectList} onWheel={this.mapScroll.bind(this)}>
           {this.props.visibleProjects.map(project =>
-            <li key={project.student_id}>
+            <li className={s.projectTile} key={project.student_id}>
               <Link to={'/project/' + `${project.student_slug}`} >
                 {project.project_title}
               </Link>
