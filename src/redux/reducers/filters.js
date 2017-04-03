@@ -10,10 +10,10 @@ export const filters = (state = initialValue, action) => {
   switch (action.type) {
 
   case actionTypes.SET_ADVISOR_FILTER:
-    return { ...state, advisor: action.payload, search: null }
+    return { ...initialValue, advisor: action.payload }
 
   case actionTypes.SET_CATEGORY_FILTER:
-    return { ...state, category: action.payload, search: null }
+    return { ...initialValue, category: action.payload }
 
   case actionTypes.SEARCH_PROJECT_SUCCEEDED:
     return { ...initialValue, search: action.payload } // reset advisor and category to ''
