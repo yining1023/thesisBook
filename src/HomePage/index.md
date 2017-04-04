@@ -1,5 +1,5 @@
 ---
-title: ITP Thesis Book 2017
+title: ITP Thesis
 ---
 
-## ITP Thesis Book 2017
+## ITP Thesis

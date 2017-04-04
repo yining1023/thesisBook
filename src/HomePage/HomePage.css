@@ -34,3 +34,39 @@
 .a {
   text-decoration: none;
 }
+
+.projectPreview {
+  color: white;
+  padding-top: 30px;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  projectQuestion: center;
+  justify-content: center;
+}
+
+.projectPreviewSmall {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 20px;
+  width: 100%;
+  display: flex;
+  projectTopics: center;
+  justify-content: center;
+}
+
+.projectQuestion {
+  font-size: 24px;
+  line-height: 1.5;
+  vertical-align: middle;
+  text-align: center;
+  max-width: 60%;
+}
+
+.projectTopics {
+  font-size: 12px;
+  vertical-align: middle;
+  text-align: center;
+  max-width: 50%;
+}

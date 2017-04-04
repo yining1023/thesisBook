@@ -2,15 +2,16 @@ import React from 'react'
 import Navigation from './Navigation'
 import {Link} from 'react-router-dom'
 import s from './Header.css'
+import FilterMenu from '../FilterMenu/FilterMenu'
 
 class Header extends React.Component {
 
   componentDidMount() {
-    window.componentHandler.upgradeElement(this.root);
+    window.componentHandler.upgradeElement(this.root)
   }
 
   componentWillUnmount() {
-    window.componentHandler.downgradeElements(this.root);
+    window.componentHandler.downgradeElements(this.root)
   }
 
   render() {
@@ -18,10 +19,11 @@ class Header extends React.Component {
       <header className={`mdl-layout__header ${s.header}`} ref={node => (this.root = node)}>
         <div className={`mdl-layout__header-row ${s.row}`}>
           <Link className={`mdl-layout-title ${s.title}`} to="/">
-            ITP Thesis Book 2017
+            ITP Thesis
           </Link>
           <div className="mdl-layout-spacer" />
           <Navigation />
+          <FilterMenu />
         </div>
       </header>
     )
@@ -29,4 +31,4 @@ class Header extends React.Component {
 
 }
 
-export default Header;
+export default Header

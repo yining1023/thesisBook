@@ -1,4 +1,9 @@
-.navigation {
-	color: white !important;
+.navigationLink {
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-decoration: none;
 }
 
+.navigation {
+  font-size: 16px;
+  margin: 25px 20px 0 10px;
+}
