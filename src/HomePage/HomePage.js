@@ -9,7 +9,7 @@ import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../redux
 import {getFilteredProjects} from '../redux/selectors/projects'
 import {Card, CardHeader, CardText, TextField} from 'material-ui'
 import ActionHome from 'material-ui/svg-icons/action/home'
-import {indigo500} from 'material-ui/styles/colors'
+import {indigo500, orange500} from 'material-ui/styles/colors'
 
 const mapStateToProps = state => ({
   filters: state.filters,
@@ -17,14 +17,8 @@ const mapStateToProps = state => ({
   searchResults: state.searchResults
 })
 
-const styles = {
-  customWidth: {
-    width: 200,
-  },
-}
-
 const iconStyles = {
-  marginLeft: 22,
+  marginLeft: 21,
 }
 
 const actions = {
@@ -71,11 +65,12 @@ class HomePage extends React.Component {
       <div className={s.content}>
         <div className='filters'>
           <SelectField
+            autoWidth={true}
             floatingLabelText="BY ADVISOR"
             value={advisor}
             onChange={this.handleAdvisorChange}
-            style={styles.customWidth}
-            autoWidth={false}
+            floatingLabelStyle={{color: 'rgba(255, 255, 255, 0.8)'}}
+            labelStyle={{color: 'white'}}
           >
             <MenuItem value='' primaryText='' />
             <MenuItem value={advisorsIds.ANDREW} primaryText='ANDREW LAZAROW' />
@@ -87,11 +82,12 @@ class HomePage extends React.Component {
           </SelectField>
 
           <SelectField
+            autoWidth={true}
             floatingLabelText="BY CATEGORY"
             value={category}
             onChange={this.handleCategoryChange}
-            style={styles.customWidth}
-            autoWidth={false}
+            floatingLabelStyle={{color: 'rgba(255, 255, 255, 0.8)'}}
+            labelStyle={{color: 'white'}}
           >
             <MenuItem value='' primaryText='' />
             <MenuItem value='artdrawing' primaryText='ART/DRAWING' />
@@ -118,21 +114,22 @@ class HomePage extends React.Component {
           hintText='Keyword or Student Name'
           floatingLabelText='SEARCH'
           onChange={this.handleSearchChange}
+          underlineFocusStyle={{borderColor: 'white'}}
+          floatingLabelStyle={{color: 'rgba(255, 255, 255, 0.8)'}}
+          floatingLabelFocusStyle={{color: 'white'}}
+          hintStyle={{color: 'rgba(255, 255, 255, 0.39)'}}
         />
 
-        <h4>Projects</h4>
         <ul ref={(elem) => {this.list = elem} } className={s.projectList} onWheel={this.mapScroll.bind(this)}>
           {this.props.visibleProjects.map(project =>
-            <li className={s.projectTile} key={project.student_id}>
+            <Card className={s.projectCard} key={project.student_id}>
               <Link to={'/project/' + `${project.student_slug}`} className={s.a}>
-              <Card className={s.projectCard}>
-                  <ActionHome color={indigo500} style={iconStyles}/>
+                <ActionHome color={indigo500} style={iconStyles}/>
                 <CardText className={s.verticalText}>
                   {project.student_name}
                 </CardText>
-              </Card>
               </Link>
-            </li>
+            </Card>
           )}
         </ul>
 

@@ -22,3 +22,7 @@
   box-shadow: none;
   color: white;
 }
+
+.searchBox {
+  color: white !important;
+}

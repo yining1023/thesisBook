@@ -7,20 +7,23 @@
 .projectList {
   white-space: nowrap;
   overflow: hidden;
-}
-
-.projectTile {
-  list-style: none;
-  display: inline-block;
-  height: 280px;
-  background: white;
-  margin: 5px;
-  width: 64px;
+  padding-top: 40px;
 }
 
 .projectCard {
+  list-style: none;
+  display: inline-block;
+  height: 280px;
+  margin: 9px;
+  width: 64px;
+
   border-radius: 0 !important;
-  height: 300px;
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+}
+
+.projectCard:hover {
+  /*height: 320px;*/
+  transform: translateY(-40px);
 }
 
 .verticalText {
