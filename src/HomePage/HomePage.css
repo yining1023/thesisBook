@@ -5,15 +5,29 @@
 }
 
 .projectList {
-  overflow: scroll;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .projectTile {
   list-style: none;
   display: inline-block;
-  height: 300px;
-  background: #3f51b5;
+  height: 280px;
+  background: white;
   margin: 5px;
-  width: 100px;
+  width: 64px;
+}
+
+.projectCard {
+  border-radius: 0 !important;
+  height: 300px;
+}
+
+.verticalText {
+  transform: rotate(90deg);
+  padding-left: 48px !important;
+}
+
+.a {
+  text-decoration: none;
 }

@@ -7,7 +7,9 @@ import MenuItem from 'material-ui/MenuItem'
 import {advisorsIds} from '../constants/advisorIds'
 import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../redux/actions/filters'
 import {getFilteredProjects} from '../redux/selectors/projects'
-import {TextField} from 'material-ui'
+import {Card, CardHeader, CardText, TextField} from 'material-ui'
+import ActionHome from 'material-ui/svg-icons/action/home'
+import {indigo500} from 'material-ui/styles/colors'
 
 const mapStateToProps = state => ({
   filters: state.filters,
@@ -19,6 +21,10 @@ const styles = {
   customWidth: {
     width: 200,
   },
+}
+
+const iconStyles = {
+  marginLeft: 22,
 }
 
 const actions = {
@@ -118,13 +124,18 @@ class HomePage extends React.Component {
         <ul ref={(elem) => {this.list = elem} } className={s.projectList} onWheel={this.mapScroll.bind(this)}>
           {this.props.visibleProjects.map(project =>
             <li className={s.projectTile} key={project.student_id}>
-              <Link to={'/project/' + `${project.student_slug}`} >
-                {project.project_title}
+              <Link to={'/project/' + `${project.student_slug}`} className={s.a}>
+              <Card className={s.projectCard}>
+                  <ActionHome color={indigo500} style={iconStyles}/>
+                <CardText className={s.verticalText}>
+                  {project.student_name}
+                </CardText>
+              </Card>
               </Link>
-              { } by {project.student_name}
             </li>
           )}
         </ul>
+
       </div>
     )
   }

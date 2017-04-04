@@ -2,8 +2,6 @@
 
 Demo: [https://thesis-book-itp-2017.firebaseapp.com](https://thesis-book-itp-2017.firebaseapp.com)
 
-Based on [React Static Boilerplate](https://github.com/kriasoft/react-static-boilerplate) by Konstantin Tarkus ([@koistya](https://twitter.com/koistya))
-
 ### Directory Layout
 
 ```shell
@@ -101,3 +99,5 @@ $ firebase serve
 $ firebase deploy
 ```
 # thesisBook
+
+Based on [React Static Boilerplate](https://github.com/kriasoft/react-static-boilerplate) by Konstantin Tarkus ([@koistya](https://twitter.com/koistya))
