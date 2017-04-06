@@ -43,21 +43,6 @@ class HomePage extends React.Component {
     }
   }
 
-  handleAdvisorChange = (event, index, value) => {
-    this.props.setAdvisorFilter(value)
-  }
-
-  handleCategoryChange = (event, index, value) => {
-    this.props.setCategoryFilter(value)
-  }
-
-  handleSearchChange = (event) => {
-    if (event.target.value) {
-      return this.props.search(event.target.value)
-    }
-    return this.props.resetSearch()
-  }
-
   mapScroll(e) {
     this.list.scrollLeft -= e.deltaX + e.deltaY
     e.preventDefault()
@@ -78,7 +63,6 @@ class HomePage extends React.Component {
   }
 
   render() {
-
     return (
       <div className={s.content}>
         <div className={s.projectPreview}>

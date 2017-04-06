@@ -11,7 +11,7 @@
     "babel-polyfill": "^6.22.0",
     "classnames": "^2.2.5",
     "fastclick": "^1.0.6",
-    "history": "^4.5.1",
+    "history": "^4.6.1",
     "lodash": "^4.17.4",
     "material-design-icons": "^3.0.1",
     "material-ui": "^0.17.1",

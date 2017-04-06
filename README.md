@@ -1,14 +1,14 @@
 # Thesis book for ITP NYU 2017 Spring
 
+MIT License, Yining Shi
+
 Demo: [https://thesis-book-itp-2017.firebaseapp.com](https://thesis-book-itp-2017.firebaseapp.com)
 
 ### Directory Layout
 
 ```shell
 ├── components/                 # Shared or generic UI components
-│   ├── Button/                 # Button component
 │   ├── Layout/                 # Website layout component
-│   ├── Link/                   # Link component to be used instead of <a>
 │   └── ...                     # etc.
 ├── docs/                       # Documentation to the project
 ├── node_modules/               # 3rd-party libraries and utilities
@@ -99,5 +99,3 @@ $ firebase serve
 $ firebase deploy
 ```
 # thesisBook
-
-Based on [React Static Boilerplate](https://github.com/kriasoft/react-static-boilerplate) by Konstantin Tarkus ([@koistya](https://twitter.com/koistya))

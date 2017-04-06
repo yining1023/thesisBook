@@ -63,4 +63,3 @@ const defaultProject = {
   }],
   slide_show: [],
 }
-

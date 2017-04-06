@@ -1,15 +1,23 @@
 import React from 'react'
 import s from './styles.css'
 import {connect} from 'react-redux'
-import {getProject} from '../redux/actions/projects'
+import {getProject, getProjects} from '../redux/actions/projects'
 import {selectProject} from '../redux/selectors/projects'
-import {isEqual} from 'lodash'
+import {isEmpty} from 'lodash'
 
+/**
+ * TODO
+ * use ONLY selectProject in mapStateToProps here
+ * and get rid of projects and studentSlug,
+ * after API supports query by slug rather than id
+ */
 const mapStateToProps = (state, ownProps) => ({
+  projects: state.projects,
+  studentSlug: ownProps.match.params.studentSlug,
   project: selectProject(state, ownProps.match.params.studentSlug),
 })
 
-const actions = { getProject }
+const actions = { getProject, getProjects }
 
 class ProjectPage extends React.Component {
 
@@ -24,21 +32,22 @@ class ProjectPage extends React.Component {
   //   }).isRequired,
   // }
 
-  componentWillMount() {
-    const project = this.props.project
-
-    if(project.student_id !== '') {
-      this.props.getProject(project.student_id)
-    }
+  getFullProject(id) {
+    return id ? this.props.getProject(id) : this.props.history.push('/error')
   }
 
-  componentWillUpdate(nextProps) {
-    const nextProject = nextProps.project
+  componentWillMount() {
+    const { project, projects } = this.props
 
-    // only fetch the project again if anything in our state.projects changes by value
-    if(!isEqual(nextProject, this.props.project) && nextProject.student_id !== '') {
-      this.props.getProject(nextProject.student_id)
+    if (isEmpty(projects)) {
+      // Hack till the API is fixed
+      return this.props.getProjects()
+        .then(receivedProjects => {
+          const prj = selectProject({ projects: receivedProjects }, this.props.studentSlug)
+          this.getFullProject(prj.student_id)
+        })
     }
+    return this.getFullProject(project.student_id)
   }
 
   // TODO: some people's url is not working like shek.it

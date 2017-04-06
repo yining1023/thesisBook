@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
 import ProjectPage from './ProjectPage/ProjectPage'
 import {ErrorPage} from './ErrorPage/ErrorPage'
@@ -9,7 +9,7 @@ import {getProjects} from './redux/actions/projects'
 import {connect} from 'react-redux'
 import s from './Routes.css'
 
-class Routes extends React.Component {
+class Root extends React.Component {
   componentWillMount() {
     this.props.getProjects()
   }
@@ -20,12 +20,14 @@ class Routes extends React.Component {
         <div className='mdl-layout mdl-js-layout'>
           <div className={`mdl-layout__inner-container ${s.container}`}>
             <Header />
-
             <div className='mdl-layout__content'>
-              <Route exact path='/' component={HomePage} />
-              <Route path='/project/:studentSlug' component={ProjectPage} />
-              <Route path='/about' component={AboutPage} />
-              <Route path='/error' component={ErrorPage} />
+              <Switch>
+                <Route exact path='/' component={HomePage} />
+                <Route path='/project/:studentSlug' component={ProjectPage} />
+                <Route path='/about' component={AboutPage} />
+                <Route path='/error' component={ErrorPage} />
+                <Route component={ErrorPage} />
+              </Switch>
             </div>
 
           </div>
@@ -36,4 +38,4 @@ class Routes extends React.Component {
   }
 }
 
-export default connect(null, { getProjects })(Routes)
+export default connect(null, { getProjects })(Root)

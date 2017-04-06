@@ -1,6 +1,5 @@
-import React from 'react';
-import Link from '../Link';
-import s from './Footer.css';
+import React from 'react'
+import s from './Footer.css'
 
 function Footer() {
   return (
@@ -47,7 +46,7 @@ function Footer() {
         </ul>
       </div>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

@@ -14,6 +14,8 @@ export const getProjects = () => dispatch => {
       }, {})
 
       dispatch(getProjectsSucceededAction(byId))
+
+      return Promise.resolve(byId)
     })
     .catch(error => dispatch(getProjectsFailedAction(error)))
 }
@@ -34,6 +36,7 @@ const getProjectsFailedAction = error => ({
 
 export const getProject = id => dispatch => {
   dispatch(getProjectRequestAction())
+
   return axios.get(`https://itp.nyu.edu/ranch/proxy/proxy.php?mode=native&url=https://itp.nyu.edu/thesis2016/wp-content/themes/itpthesis/api2.php?student_id=${id}`)
     .then(response => dispatch(getProjectSucceededAction(response.data)))
     .catch(error => dispatch(getProjectFailedAction(error)))

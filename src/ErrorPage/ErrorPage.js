@@ -1,5 +1,4 @@
 import React from 'react'
-import history from '../history'
 import {Link} from 'react-router-dom'
 import s from './styles.css'
 
@@ -7,17 +6,17 @@ export class ErrorPage extends React.Component {
 
   static propTypes = {
     error: React.PropTypes.object,  // eslint-disable-line react/forbid-prop-types
-  };
-
-  componentDidMount() {
-    document.title = this.props.error && this.props.error.status === 404 ?
-      'Page Not Found' : 'Error'
   }
 
-  goBack = (event) => {
+  // componentDidMount() {
+  //   document.title = this.props.error && this.props.error.status === 404 ?
+  //     'Page Not Found' : 'Error'
+  // }
+
+  goBack(event) {
     event.preventDefault()
-    history.goBack()
-  };
+    this.props.history.goBack()
+  }
 
   render() {
     if (this.props.error) console.error(this.props.error) // eslint-disable-line no-console
@@ -37,7 +36,7 @@ export class ErrorPage extends React.Component {
             </p>
           }
           <p className={s.text}>
-            <a href="/" onClick={this.goBack}>Go back</a>, or head over to the&nbsp;
+            <a href="/" onClick={this.goBack.bind(this)}>Go back</a>, or head over to the&nbsp;
             <Link to="/">home page</Link> to choose a new direction.
           </p>
         </main>
@@ -46,4 +45,3 @@ export class ErrorPage extends React.Component {
   }
 
 }
-
