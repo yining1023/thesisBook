@@ -1,28 +1,32 @@
-@media screen and (max-width: 1024px) {
-  .content {
-    padding: 0 16px;
-  }
+.content {
+  height: 100%;
 }
 
 .projectList {
   white-space: nowrap;
-  overflow: hidden;
+  overflow-x: scroll !important;
   padding-top: 40px;
+  max-width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.projectList::-webkit-scrollbar {
+  display: none;
 }
 
 .projectCard {
+  cursor: pointer;
   list-style: none;
   display: inline-block;
   height: 280px;
   margin: 9px;
   width: 64px;
-
   border-radius: 0 !important;
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
 }
 
 .projectCard:hover {
-  /*height: 320px;*/
   transform: translateY(-40px);
 }
 
@@ -30,11 +34,15 @@
   font-size: 15px;
   color: #413ca0 !important;
   transform: rotate(-90deg);
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 .a {
   text-decoration: none;
+}
+
+.projectQuestionContainer {
+  flex-grow: 1;
 }
 
 .projectPreview {
@@ -43,7 +51,6 @@
   height: 150px;
   width: 100%;
   display: flex;
-  projectQuestion: center;
   justify-content: center;
 }
 
@@ -53,7 +60,6 @@
   height: 20px;
   width: 100%;
   display: flex;
-  projectTopics: center;
   justify-content: center;
 }
 
@@ -63,6 +69,13 @@
   vertical-align: middle;
   text-align: center;
   max-width: 60%;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.appear {
+  transition: all 0.5s ease;
+  opacity: 1;
 }
 
 .projectTopics {
@@ -78,12 +91,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-
-  font-weight: bold;
-  text-align: center;
+  flex-wrap: wrap;
 }
 
 .wrapper > * {
@@ -96,12 +104,13 @@
 }
 
 @media all and (min-width: 800px) {
-  .main    { flex: 3 0px; }
-  .main    { order: 2; }
+  .main { flex: 3 0; }
+  .main { order: 2; }
 }
 
 .aside {
-  align-self: center;
+  align-self: flex-start;
+  max-width: 50px;
 }
 
 .topicIcon {

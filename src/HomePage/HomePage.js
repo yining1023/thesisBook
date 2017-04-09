@@ -63,6 +63,10 @@ class HomePage extends React.Component {
     })
   }
 
+  navigateTo(url) {
+    this.props.history.push(url)
+  }
+
   render() {
     return (
       <div className={s.content}>
@@ -74,9 +78,9 @@ class HomePage extends React.Component {
             </Link>
           </aside>
 
-          <article class={s.main}>
+          <article className={s.projectQuestionContainer}>
             <div className={s.projectPreview}>
-              <div className={s.projectQuestion}>
+              <div className={`${s.projectQuestion} ${this.state.projectHeading ? s.appear : '' }`}>
                 {this.state.projectHeading}
               </div>
             </div>
@@ -94,14 +98,13 @@ class HomePage extends React.Component {
           {this.props.visibleProjects.map(project =>
             <Card className={s.projectCard}
                   key={project.student_id}
+                  onClick={this.navigateTo.bind(this, `/project/${project.student_slug}`) }
                   onMouseEnter={this.mouseIn.bind(this, project)}
                   onMouseLeave={this.mouseOut.bind(this)}>
-              <Link to={'/project/' + `${project.student_slug}`} className={s.a}>
-                <img className={`${s.topicIcon}`} src={topicIcon} alt={"data vis"} style={iconStyles} />
-                <CardText className={s.verticalText}>
-                  {project.student_name}
-                </CardText>
-              </Link>
+              <img className={`${s.topicIcon}`} src={topicIcon} alt={"data vis"} style={iconStyles} />
+              <CardText className={s.verticalText}>
+                {project.student_name}
+              </CardText>
             </Card>
           )}
         </ul>

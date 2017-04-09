@@ -1,0 +1,12 @@
+.container {
+  background: #403ca0;
+  font-family: 'Source Serif Pro', serif;
+  height: 100%;
+}
+
+.mainContent {
+  height: 100%;
+  bottom: 0;
+  overflow: auto;
+  z-index: 1;
+}

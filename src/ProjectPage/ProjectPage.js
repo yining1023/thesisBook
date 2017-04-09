@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './styles.css'
+import s from './ProjectPage.css'
 import {connect} from 'react-redux'
 import {getProject, getProjects} from '../redux/actions/projects'
 import {selectProject} from '../redux/selectors/projects'
