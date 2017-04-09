@@ -15,7 +15,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <nav className={s.navigation} ref={node => (this.root = node)}>
-        <Link className={s.navigationLink} to="/about">ABOUT</Link>
+        {/*<Link className={s.navigationLink} to="/about">ABOUT</Link>*/}
       </nav>
     )
   }

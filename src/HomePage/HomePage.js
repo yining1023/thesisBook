@@ -6,6 +6,7 @@ import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../redux
 import {getFilteredProjects} from '../redux/selectors/projects'
 import {Card, CardText} from 'material-ui'
 import ActionHome from 'material-ui/svg-icons/action/home'
+import InfoOutline from 'material-ui/svg-icons/action/info-outline'
 import {indigo500} from 'material-ui/styles/colors'
 
 const mapStateToProps = state => ({
@@ -65,16 +66,30 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className={s.content}>
-        <div className={s.projectPreview}>
-          <div className={s.projectQuestion}>
-            {this.state.projectHeading}
-          </div>
+        <div className={s.wrapper}>
+
+          <aside className={s.aside}>
+            <Link className={s.navigationLink} to="/about">
+              <InfoOutline style={iconStyles} color={'white'} />
+            </Link>
+          </aside>
+
+          <article class={s.main}>
+            <div className={s.projectPreview}>
+              <div className={s.projectQuestion}>
+                {this.state.projectHeading}
+              </div>
+            </div>
+
+            <div className={s.projectPreviewSmall}>
+              <div className={s.projectTopics}>
+                {this.state.projectTopics}
+              </div>
+            </div>
+          </article>
+
         </div>
-        <div className={s.projectPreviewSmall}>
-          <div className={s.projectTopics}>
-            {this.state.projectTopics}
-          </div>
-        </div>
+
         <ul ref={(elem) => {this.list = elem} } className={s.projectList} onWheel={this.mapScroll.bind(this)}>
           {this.props.visibleProjects.map(project =>
             <Card className={s.projectCard}

@@ -69,3 +69,35 @@
   text-align: center;
   max-width: 50%;
 }
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding-left: 30px;
+  flex: 1 100%;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .main    { order: 2; }
+}
+
+.aside {
+  align-self: center;
+}

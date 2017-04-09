@@ -15,3 +15,5 @@ npm-debug.log
 # Firebase
 firebase-debug.log
 tools/config.js
+
+.DS_Store
