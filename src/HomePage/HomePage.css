@@ -27,8 +27,10 @@
 }
 
 .verticalText {
-  transform: rotate(90deg);
-  padding-left: 48px !important;
+  font-size: 15px;
+  color: #413ca0 !important;
+  transform: rotate(-90deg);
+  margin-top: 100px;
 }
 
 .a {
@@ -100,4 +102,8 @@
 
 .aside {
   align-self: center;
+}
+
+.topicIcon {
+  width: 30px;
 }

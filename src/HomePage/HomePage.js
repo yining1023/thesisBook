@@ -5,9 +5,8 @@ import {Link} from 'react-router-dom'
 import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../redux/actions/filters'
 import {getFilteredProjects} from '../redux/selectors/projects'
 import {Card, CardText} from 'material-ui'
-import ActionHome from 'material-ui/svg-icons/action/home'
 import InfoOutline from 'material-ui/svg-icons/action/info-outline'
-import {indigo500} from 'material-ui/styles/colors'
+import topicIcon from '../img/topic-icon.svg'
 
 const mapStateToProps = state => ({
   filters: state.filters,
@@ -16,7 +15,8 @@ const mapStateToProps = state => ({
 })
 
 const iconStyles = {
-  marginLeft: 21,
+  marginLeft: 17,
+  marginTop: 20
 }
 
 const actions = {
@@ -97,7 +97,7 @@ class HomePage extends React.Component {
                   onMouseEnter={this.mouseIn.bind(this, project)}
                   onMouseLeave={this.mouseOut.bind(this)}>
               <Link to={'/project/' + `${project.student_slug}`} className={s.a}>
-                <ActionHome color={indigo500} style={iconStyles}/>
+                <img className={`${s.topicIcon}`} src={topicIcon} alt={"data vis"} style={iconStyles} />
                 <CardText className={s.verticalText}>
                   {project.student_name}
                 </CardText>
