@@ -46,6 +46,15 @@ $ cd thesisBook
 $ yarn install                  # Install project dependencies listed in package.json
 ```
 
+**Step 2.1**. Create a 'config.js' file in the `Tools` folder, and copy paste the following code into 'config.js' file
+```javascript
+module.exports = {
+  title: 'thesis book itp 2017',        // Your website title
+  url: 'https://thesis-book-itp-2017.firebaseapp.com',          // Your website URL
+  project: 'thesis-book-itp-2017',      // Firebase ProjectPage. See README.md -> How to Deploy
+  trackingID: 'xxxxxxxxxxxxx',                 // Google Analytics Site's ID
+}
+```
 
 **Step 3**. Compile and launch your app by running:
 
