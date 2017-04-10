@@ -27,21 +27,24 @@ export class ErrorPage extends React.Component {
       ['Error', 'Oops, something went wrong']
 
     return (
-      <div className={s.container}>
+      <div>
         <SimpleHeader />
-        <main className={s.content}>
-          <h1 className={s.code}>{code}</h1>
-          <p className={s.title}>{title}</p>
-          {code === '404' &&
+        <div className={s.container}>
+
+          <main className={s.content}>
+            <h1 className={s.code}>{code}</h1>
+            <p className={s.title}>{title}</p>
+            {code === '404' &&
             <p className={s.text}>
               The page you&apos;re looking for does not exist or an another error occurred.
             </p>
-          }
-          <p className={s.text}>
-            <a href="/" onClick={this.goBack.bind(this)}>Go back</a>, or head over to the&nbsp;
-            <Link to="/">home page</Link> to choose a new direction.
-          </p>
-        </main>
+            }
+            <p className={s.text}>
+              <a href="/" onClick={this.goBack.bind(this)}>Go back</a>, or head over to the&nbsp;
+              <Link to="/">home page</Link> to choose a new direction.
+            </p>
+          </main>
+        </div>
       </div>
     )
   }

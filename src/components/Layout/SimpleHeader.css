@@ -1,0 +1,43 @@
+.desktop {
+  display: flex;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+}
+
+.row {
+  padding: 40px;
+  display: flex;
+}
+
+.title {
+  width: 50px;
+  margin: 25px 20px 0 5px;
+}
+
+.header {
+  display: flex;
+  background-color: #403ca0;
+  box-shadow: none;
+  color: white;
+  z-index: 3;
+}
+
+.row {
+  /*padding: 0 16px;*/
+}
+
+.searchBox {
+  color: white !important;
+}

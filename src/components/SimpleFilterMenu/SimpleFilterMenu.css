@@ -1,0 +1,22 @@
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 960px) {
+  .filters {
+    flex-direction: column;
+  }
+}
+
+.navigationLink {
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  margin-top: 26px;
+  line-height: 2;
+  border-bottom: 1.9px solid;
+}
