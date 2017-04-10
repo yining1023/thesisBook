@@ -43,6 +43,7 @@
 
 .projectQuestionContainer {
   flex-grow: 1;
+  max-width: 90%;
 }
 
 .projectPreview {
@@ -109,7 +110,7 @@
 }
 
 .aside {
-  align-self: flex-start;
+  align-self: center;
   max-width: 50px;
 }
 

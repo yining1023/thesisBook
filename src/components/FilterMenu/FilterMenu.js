@@ -6,6 +6,7 @@ import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../../re
 import {getFilteredProjects} from '../../redux/selectors/projects'
 import {TextField, SelectField, MenuItem} from 'material-ui'
 import {Link} from 'react-router-dom'
+import {debounce} from 'lodash'
 
 const mapStateToProps = state => ({
   filters: state.filters,
@@ -22,6 +23,11 @@ const actions = {
 
 class FilterMenu extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.handleSearchChange = debounce(this.handleSearchChange, 200)
+  }
+
   handleAdvisorChange = (event, index, value) => {
     this.props.setAdvisorFilter(value)
   }
@@ -30,9 +36,9 @@ class FilterMenu extends React.Component {
     this.props.setCategoryFilter(value)
   }
 
-  handleSearchChange = (event) => {
-    if (event.target.value) {
-      return this.props.search(event.target.value)
+  handleSearchChange = (event, value) => {
+    if (value) {
+      return this.props.search(value)
     }
     return this.props.resetSearch()
   }

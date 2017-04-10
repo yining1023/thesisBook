@@ -27,8 +27,7 @@ export const getFilteredProjects = state => {
       matchCategory = get(project, 'topics[0].slug') === filters.category
     }
 
-    // if filters.search is set, update matchCategory boolean
-    if (filters.search !== null) {
+    if (filters.search !== null && filters.search !== []) {
       matchSearch = filters.search.indexOf(parseInt(project.student_id)) !== -1
     }
 
