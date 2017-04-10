@@ -1,28 +1,41 @@
+.desktop {
+  display: flex;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+}
+
 .row {
   padding: 40px;
   display: flex;
 }
 
 .title {
-  width: 58px;
+  width: 50px;
   margin: 25px 20px 0 10px;
 }
 
-@media screen and (max-width: 1024px) {
-  .header {
-    display: flex;
-  }
-
-  .row {
-    padding: 0 16px;
-  }
-}
-
 .header {
+  display: flex;
   background-color: #403ca0;
   box-shadow: none;
   color: white;
   z-index: 3;
+}
+
+.row {
+  padding: 0 16px;
 }
 
 .searchBox {

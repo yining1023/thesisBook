@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../redux/actions/filters'
 import {getFilteredProjects} from '../redux/selectors/projects'
 import {Card, CardText} from 'material-ui'
-import InfoOutline from 'material-ui/svg-icons/action/info-outline'
 import topicIcon from '../img/topic-icon.svg'
 
 const mapStateToProps = state => ({
@@ -71,12 +70,6 @@ class HomePage extends React.Component {
     return (
       <div className={s.content}>
         <div className={s.wrapper}>
-
-          <aside className={s.aside}>
-            <Link className={s.navigationLink} to="/about">
-              <InfoOutline style={iconStyles} color={'white'} />
-            </Link>
-          </aside>
 
           <article className={s.projectQuestionContainer}>
             <div className={s.projectPreview}>
