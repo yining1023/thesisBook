@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import s from './Header.css'
 import FilterMenu from '../FilterMenu/FilterMenu'
-import logo from '../../img/itp-logo.png'
+import logo from '../../img/itp-logo.svg'
 
 
 class Header extends React.Component {
