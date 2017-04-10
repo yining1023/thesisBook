@@ -6,6 +6,7 @@ import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../redux
 import {getFilteredProjects} from '../redux/selectors/projects'
 import {Card, CardText} from 'material-ui'
 import topicIcon from '../img/topic-icon.svg'
+import Header from '../components/Layout/Header'
 
 const mapStateToProps = state => ({
   filters: state.filters,
@@ -69,19 +70,15 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className={s.content}>
+        <Header />
         <div className={s.wrapper}>
 
           <article className={s.projectQuestionContainer}>
-            <div className={s.projectPreview}>
-              <div className={`${s.projectQuestion} ${this.state.projectHeading ? s.appear : '' }`}>
-                {this.state.projectHeading}
-              </div>
+            <div className={`${s.projectQuestion} ${this.state.projectHeading ? s.appear : '' }`}>
+              {this.state.projectHeading}
             </div>
-
-            <div className={s.projectPreviewSmall}>
-              <div className={s.projectTopics}>
-                {this.state.projectTopics}
-              </div>
+            <div className={s.projectTopics}>
+              {this.state.projectTopics}
             </div>
           </article>
 

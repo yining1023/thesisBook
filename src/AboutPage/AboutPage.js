@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './styles.css'
 import {html, title} from './index.md'
+import SimpleHeader from '../components/Layout/SimpleHeader'
 
 export class AboutPage extends React.Component {
 
@@ -11,6 +12,7 @@ export class AboutPage extends React.Component {
   render() {
     return (
       <div className={s.content}>
+        <SimpleHeader />
         <div
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: html }}

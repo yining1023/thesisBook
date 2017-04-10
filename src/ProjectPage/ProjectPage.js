@@ -1,16 +1,17 @@
-import React from 'react'
-import s from './ProjectPage.css'
-import {connect} from 'react-redux'
-import {getProject, getProjects} from '../redux/actions/projects'
-import {selectProject} from '../redux/selectors/projects'
-import {isEmpty} from 'lodash'
-
 /**
  * TODO
  * use ONLY selectProject in mapStateToProps here
  * and get rid of projects and studentSlug,
  * after API supports query by slug rather than id
  */
+import React from 'react'
+import s from './ProjectPage.css'
+import {connect} from 'react-redux'
+import {getProject, getProjects} from '../redux/actions/projects'
+import {selectProject} from '../redux/selectors/projects'
+import {isEmpty} from 'lodash'
+import SimpleHeader from '../components/Layout/SimpleHeader'
+
 const mapStateToProps = (state, ownProps) => ({
   projects: state.projects,
   studentSlug: ownProps.match.params.studentSlug,
@@ -54,6 +55,7 @@ class ProjectPage extends React.Component {
   render() {
     return (
       <div className={s.content}>
+        <SimpleHeader />
         <h3>{this.props.project.project_title}</h3>
         <h4>{this.props.project.student_name}</h4>
 

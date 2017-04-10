@@ -106,7 +106,7 @@ class FilterMenu extends React.Component {
           floatingLabelStyle={{ color: 'rgba(255, 255, 255, 0.8)' }}
           floatingLabelFocusStyle={{color: 'white'}}
           hintStyle={{ color: 'rgba(255, 255, 255, 0.39)' }}
-          inputStyle={s.inputStyle}
+          inputStyle={{color: 'white'}}
           style={{fontSize: '14px'}}
         />
         &nbsp;&nbsp;

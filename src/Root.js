@@ -18,7 +18,6 @@ class Root extends React.Component {
     return (
       <Router>
         <div className={s.container}>
-          <Header />
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path='/project/:studentSlug' component={ProjectPage} />

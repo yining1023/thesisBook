@@ -6,7 +6,7 @@
   display: none;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 960px) {
   .desktop {
     display: none;
   }
@@ -23,7 +23,7 @@
 
 .title {
   width: 50px;
-  margin: 25px 20px 0 10px;
+  margin: 25px 20px 0 5px;
 }
 
 .header {
@@ -35,7 +35,7 @@
 }
 
 .row {
-  padding: 0 16px;
+  /*padding: 0 16px;*/
 }
 
 .searchBox {

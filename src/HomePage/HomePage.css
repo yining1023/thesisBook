@@ -43,25 +43,9 @@
 
 .projectQuestionContainer {
   flex-grow: 1;
-  max-width: 90%;
-}
-
-.projectPreview {
-  color: white;
-  padding-top: 30px;
-  height: 150px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.projectPreviewSmall {
+  text-align: center;
   color: white;
-  padding-top: 10px;
-  height: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .projectQuestion {
@@ -70,8 +54,11 @@
   vertical-align: middle;
   text-align: center;
   max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
   transition: all 0.5s ease;
   opacity: 0;
+  margin-top: 30px;
 }
 
 .appear {
@@ -80,40 +67,17 @@
 }
 
 .projectTopics {
-  font-size: 12px;
-  vertical-align: middle;
-  text-align: center;
-  max-width: 50%;
-}
-
-.wrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.wrapper > * {
-  padding-left: 30px;
-  flex: 1 100%;
-}
-
-@media all and (min-width: 600px) {
-  .aside { flex: 1 auto; }
-}
-
-@media all and (min-width: 800px) {
-  .main { flex: 3 0; }
-  .main { order: 2; }
-}
-
-.aside {
-  align-self: center;
-  max-width: 50px;
+  font-size: 14px;
+  margin-top: 10px;
+  height: 20px;
 }
 
 .topicIcon {
   width: 30px;
+}
+
+@media screen and (min-width: 1300px) {
+  .projectQuestion {
+    font-size: 42px !important;
+  }
 }
