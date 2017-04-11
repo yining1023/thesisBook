@@ -7,9 +7,7 @@ import {AboutThesisPage} from './AboutThesisPage'
 import {AboutClassPage} from './AboutClassPage'
 import {AboutCreditsPage} from './AboutCreditsPage'
 import {Switch} from 'react-router-dom'
-import Menu from 'material-ui/Menu'
-import MenuItem from 'material-ui/MenuItem'
-import {Paper} from 'material-ui'
+import {MenuItem, Menu} from 'material-ui'
 
 const style = {
   display: 'inline-block',
@@ -34,7 +32,10 @@ export class AboutPage extends React.Component {
         <SimpleHeader />
 
         <aside>
-          <Menu style={style} menuItemStyle={{color: 'white'}} selectedMenuItemStyle={{fontWeight: 500}}>
+          <Menu
+            style={style}
+            selectedMenuItemStyle={{fontWeight: 500}}//doesn't work
+          >
             <Link to='/about/itp-thesis' ><MenuItem primaryText="About ITP Thesis" /></Link>
             <Link to='/about/class-2017' ><MenuItem primaryText="Class of 2017" /></Link>
             <Link to='/about/credits' ><MenuItem primaryText="Credits" /></Link>
