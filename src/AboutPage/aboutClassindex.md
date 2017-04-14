@@ -1,8 +1,8 @@
 ---
 title: About ITP Thesis
 ---
-
-<img src="https://itp.nyu.edu/thesis2016/wp-content/uploads/2016/04/ITP-Class-2016.png" alt="itp thesis class 2017" style="width: 600px; margin-left: 48px;"/>
+<article>
+<img src="https://itp.nyu.edu/thesis2016/wp-content/uploads/2016/04/ITP-Class-2016.png" alt="itp thesis class 2017" style="width: 800px; margin-left: 48px;"/>
 
 
     Dear Class of 2016
@@ -65,6 +65,6 @@ title: About ITP Thesis
 
     Cheers!
     Your Thesis Faculty
-
+</article>
 
 
