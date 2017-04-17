@@ -28,6 +28,7 @@
 
 .projectCard:hover {
   transform: translateY(-40px);
+  background-color: yellow;
 }
 
 .verticalText {
@@ -49,16 +50,16 @@
 }
 
 .projectQuestion {
-  font-size: 24px;
-  line-height: 1.5;
+  font-size: 44px;
+  line-height: 1.2;
   vertical-align: middle;
   text-align: center;
-  max-width: 60%;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
   transition: all 0.5s ease;
   opacity: 0;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .appear {

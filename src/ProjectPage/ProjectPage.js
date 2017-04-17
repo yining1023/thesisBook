@@ -11,6 +11,7 @@ import {getProject, getProjects} from '../redux/actions/projects'
 import {selectProject} from '../redux/selectors/projects'
 import {isEmpty} from 'lodash'
 import SimpleHeader from '../components/Layout/SimpleHeader'
+import logo from '../img/itp-logo-blue.svg'
 
 const mapStateToProps = (state, ownProps) => ({
   projects: state.projects,
@@ -19,6 +20,8 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const actions = { getProject, getProjects }
+
+// can write a function outside of the class
 
 class ProjectPage extends React.Component {
 
@@ -51,37 +54,64 @@ class ProjectPage extends React.Component {
     return this.getFullProject(project.student_id)
   }
 
-  // TODO: some people's url is not working like shek.it
+
+
   render() {
+
     return (
       <div className={s.content}>
-        <SimpleHeader />
-        <h3>{this.props.project.project_title}</h3>
-        <h4>{this.props.project.student_name}</h4>
 
-        <h4>{this.props.project.project_question}</h4>
+        <div className={s.logoHeader} >
+          <a className={s.itpLogo}>
+            <img className={s.logoImage} src={logo} alt={"ITP Thesis 2017"} />
+          </a>
+        </div>
 
-        <p>Topics: {this.props.project.topics[0].name}</p>
-        <p>Tags: {this.props.project.tags.map((tag, i) =>
-            <span key={i}>{tag.name}, </span>
-          )}
-        </p>
+        <div className={s.greyHeader}>
 
-        <p><a rel="external" href={this.props.project.video_presentation_url}>Video Presentation</a></p>
-        {this.props.project.project_url ? <p><a rel="external" href={this.props.project.project_url}>Project Link</a></p> : null}
+          <div className={s.topicIcon}></div>
+          <h3 className={s.projectTitle}>{this.props.project.project_title}</h3>
+          <h4 className={s.studentName}>{this.props.project.student_name}</h4>
 
-        <p>Advisor: {this.props.project.advisor_name}</p>
-        <p>Description: {this.props.project.short_description}</p>
-        <p dangerouslySetInnerHTML={{ __html: this.props.project.description }} />
-        <p dangerouslySetInnerHTML={{ __html: this.props.project.further_reading }} />
+          <hr className={s.separator}/>
 
-        <div>
-          {this.props.project.slide_show.map(slide =>
-            <div key={slide.title}>
-              <img rel="external" src={slide.src} />
-              <p>{slide.caption}</p>
-            </div>
-          )}
+          <div className={s.tagsTopicsAdvisor}>
+            <p>Topics: {this.props.project.topics[0].name}</p>
+            <p>Tags: {this.props.project.tags.map((tag, i) =>
+                <span key={i}>{tag.name}, </span>
+              )}
+            </p>
+            <p>Advisor: {this.props.project.advisor_name}</p>
+          </div>
+        </div>
+
+        <div className={s.bodyContainer}>
+
+          <p className={s.shortDescription} dangerouslySetInnerHTML={{__html:this.props.project.short_description}}></p>
+          <br/>
+          <div className={s.slideshow}>
+            {this.props.project.slide_show.map((slide, index) =>
+              <div key={slide.title} className={index+1}>
+                <img rel="external" src={slide.src} />
+                <p className={s.caption}>{slide.caption}</p>
+              </div>
+
+            )}
+          </div>
+          <div className={s.slideshowNavigation}>
+            <div className={s.navDot} className ={s.one}></div>
+
+          </div>
+
+          <div className={s.longDescription}>
+            <p className={s.bodyCopy} dangerouslySetInnerHTML={{ __html: this.props.project.description }} />
+            <p className={s.bodyCopy} dangerouslySetInnerHTML={{ __html: this.props.project.further_reading }} />
+
+            <p className={s.addLinks}><a target="_blank" rel="external" href={this.props.project.video_presentation_url}>Video Presentation</a></p>
+            {this.props.project.project_url ? <p className={s.addLinks}><a target="_blank" rel="external" href={this.props.project.project_url}>Project Link</a></p> : null}
+
+          </div>
+
         </div>
       </div>
     )
