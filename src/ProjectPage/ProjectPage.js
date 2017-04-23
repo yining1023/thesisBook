@@ -10,7 +10,7 @@ import {connect} from 'react-redux'
 import {getProject, getProjects} from '../redux/actions/projects'
 import {selectProject} from '../redux/selectors/projects'
 import {isEmpty} from 'lodash'
-import SimpleHeader from '../components/Layout/SimpleHeader'
+import {Link} from 'react-router-dom'
 import logo from '../img/itp-logo-blue.svg'
 
 const mapStateToProps = (state, ownProps) => ({
@@ -62,9 +62,9 @@ class ProjectPage extends React.Component {
       <div className={s.content}>
 
         <div className={s.logoHeader} >
-          <a className={s.itpLogo}>
+          <Link to="/" className={s.itpLogo}>
             <img className={s.logoImage} src={logo} alt={"ITP Thesis 2017"} />
-          </a>
+          </Link>
         </div>
 
         <div className={s.greyHeader}>
