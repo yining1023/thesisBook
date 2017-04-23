@@ -28,7 +28,7 @@
 
 .header {
   display: flex;
-  background-color: #403ca0;
+  background-color: rgba(0,0,0,0);
   box-shadow: none;
   color: white;
   z-index: 3;
