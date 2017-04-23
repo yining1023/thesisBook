@@ -98,20 +98,20 @@ class HomePage extends React.Component {
             <article className={`${s.projectQuestionContainer} ${!this.state.projectHeading ? s.appear : '' }`}>
               {
                 advisor && <div>
-                  <div className={s.hoveredSubtitle}>Advisor</div>
+                  <div className={s.hoveredSubtitle}>ADVISOR</div>
                   <div className={s.hoveredTitle}>{advisorNames[advisor]}</div>
                 </div>
               }
               {
                 category && <div>
-                  <div className={s.hoveredSubtitle}>Topic</div>
+                  <div className={s.hoveredSubtitle}>TOPIC</div>
                   <div className={s.hoveredTitle}>{categories[category]}</div>
                 </div>
 
               }
               {
                 get(search, 'length') === 0 &&
-                <div className={s.hoveredSubtitle}>No results found</div>
+                <div className={s.hoveredTitle}>No Results Found</div>
               }
               {
                 get(search, 'length') > 0 &&
@@ -120,7 +120,7 @@ class HomePage extends React.Component {
 
               <a className={s.clearFiltersButton} onClick={() => this.clearFilters()}>
                 <ClearIcon style={{color: 'white'}}/>
-                &nbsp;Clear
+                &nbsp;CLEAR
               </a>
             </article>
           }

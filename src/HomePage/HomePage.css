@@ -53,7 +53,7 @@
 }
 
 .hoveredTitle {
-  font-size: 44px;
+  font-size: 3.5rem;
   line-height: 1.2;
   vertical-align: middle;
   text-align: center;
@@ -61,7 +61,7 @@
   margin-left: auto;
   margin-right: auto;
   transition: all 0.5s ease;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .appear {
@@ -71,9 +71,9 @@
 
 .hoveredSubtitle {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 1.3rem;
   margin-top: 10px;
-  height: 20px;
+  /*height: 20px;*/
 }
 
 .topicIcon {
@@ -81,16 +81,37 @@
 }
 
 .clearFiltersButton {
+  font-family: 'Roboto', sans-serif;
   cursor: pointer;
   color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  opacity: 0.6;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 1300px) {
   .projectQuestion {
     font-size: 42px !important;
+  }
+}
+
+@media screen and (max-height: 770px) {
+  .hoveredTitle {
+    font-size: 2.7rem;
+  }
+  .hoveredSubtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .hoveredTitle {
+    font-size: 2.2rem;
+  }
+  .hoveredSubtitle {
+    font-size: 1.1rem;
   }
 }
