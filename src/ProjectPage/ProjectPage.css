@@ -3,5 +3,172 @@
   bottom: 0;
   overflow: auto;
   z-index: 1;
+  background-color: white;
 }
 
+/*a {
+  color: #333340 !important;
+  text-decoration: none;
+  border-bottom: 2px solid #333340;
+}*/
+
+.logoHeader {
+    background-color: #C8CDD8;
+}
+
+.logoImage {
+  width: 50px;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.greyHeader {
+  min-height: 300px;
+  background-color: #C8CDD8;
+  text-align: center;
+  color: #292755;
+  padding-top: 20px;
+  padding-left: 18%;
+  padding-right: 18%;
+  padding-bottom: 40px;
+  line-height: 1.2;
+}
+
+.topicIcon {
+  width: 72px;
+  height: 72px;
+  border:3px solid #292755;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectTitle {
+  font-family: Source Serif Pro;
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 1.2;
+}
+
+/*.projectQuestion {
+  font-family: Source Serif Pro;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.4;
+  letter-spacing: .5;
+  padding-left: 5%;
+  padding-right: 5%;
+}*/
+
+.studentName, .shortDescription {
+  width: 80%;
+  margin: 0 auto 0 auto;
+  font-family: SofiaProBold;
+  font-size: 22px;
+  color: #292755;
+  letter-spacing: 0.2px;
+  line-height: 1.3;
+}
+
+
+.separator {
+  width: 60px;
+  height: 3px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #292755;
+  background-color: #292755;
+  border: none;
+}
+
+
+
+.tagsTopicsAdvisor p {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: SofiaProBold;
+  font-size: 10px;
+  color: #292755;
+  letter-spacing: 0.36px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  /*background: yellow;*/
+  margin: 0;
+
+}
+
+.bodyContainer {
+  max-width: 752px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 65px;
+  /*background: yellow;*/
+}
+
+.longDescription {
+  width: 80%;
+  margin: 0 auto 0 auto;
+  margin-bottom: 100px;
+  /*background: green;*/
+}
+
+.longDescription p, .longDescription ul {
+  font-family: SourceSerifPro-Regular;
+  font-size: 16px;
+  color: #333340;
+  letter-spacing: 0.3px;
+}
+
+
+.slideshow img {
+  width: 750px;
+}
+
+.caption {
+    font-family: SofiaProRegular;
+    font-size: 10px;
+    color: #3C3B49;
+    letter-spacing: 0.33px;
+    line-height: 1.3;
+    width: 70%;
+    margin-top: 10px;
+}
+
+/* COLOR CHANGING NOT WORKING FOR SOME REASON - defaulting to pink */
+.addLinks a {
+  font-family: SofiaProBold !important;
+  font-size: 16px !important;
+  color: #333340 !important;
+  letter-spacing: 0.53px !important;
+  line-height: 1.4 !important;
+  text-decoration: none;
+  border-bottom: 2px solid #333340;
+  transition: ease .25s;
+}
+
+.addLinks a:hover {
+  color: #514AD7 !important;
+  border-bottom: 2px solid #514AD7;
+  transition: ease .25s;
+}
+
+/* SLIDE SHOW NAV - default not showing up */
+.slideShowNavigation {
+  height: 50px;
+  width: 100%;
+  background-color: yellow;
+}
+.navDot {
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline;
+}
+
+.one {
+  background-color: green;
+}
