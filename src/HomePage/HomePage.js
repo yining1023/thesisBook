@@ -1,12 +1,15 @@
 import React from 'react'
 import s from './HomePage.css'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
 import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../redux/actions/filters'
 import {getFilteredProjects} from '../redux/selectors/projects'
 import {Card, CardText} from 'material-ui'
 import topicIcon from '../img/topic-icon.svg'
 import Header from '../components/Layout/Header'
+import {categories} from '../constants/categories'
+import {advisorNames} from '../constants/advisorIds'
+import ClearIcon from 'material-ui/svg-icons/navigation/close'
+import {get} from 'lodash'
 
 const mapStateToProps = state => ({
   filters: state.filters,
@@ -67,21 +70,60 @@ class HomePage extends React.Component {
     this.props.history.push(url)
   }
 
+  clearFilters() {
+    this.props.setCategoryFilter('')
+    this.props.setAdvisorFilter('')
+    this.props.resetSearch()
+  }
+
   render() {
+    const { advisor, category, search } = this.props.filters
     return (
       <div className={s.content}>
         <Header />
         <div className={s.wrapper}>
+          {
+            <article className={`${s.projectQuestionContainer} ${this.state.projectHeading ? s.appear : '' }`}>
+              <div className={s.hoveredTitle}>
+                {this.state.projectHeading}
+              </div>
+              <div className={s.hoveredSubtitle}>
+                {this.state.projectTopics}
+              </div>
 
-          <article className={s.projectQuestionContainer}>
-            <div className={`${s.projectQuestion} ${this.state.projectHeading ? s.appear : '' }`}>
-              {this.state.projectHeading}
-            </div>
-            <div className={s.projectTopics}>
-              {this.state.projectTopics}
-            </div>
-          </article>
+            </article>
+          }
+          {
+            (!this.state.projectHeading && (advisor || category || search) ) &&
+            <article className={`${s.projectQuestionContainer} ${!this.state.projectHeading ? s.appear : '' }`}>
+              {
+                advisor && <div>
+                  <div className={s.hoveredSubtitle}>Advisor</div>
+                  <div className={s.hoveredTitle}>{advisorNames[advisor]}</div>
+                </div>
+              }
+              {
+                category && <div>
+                  <div className={s.hoveredSubtitle}>Topic</div>
+                  <div className={s.hoveredTitle}>{categories[category]}</div>
+                </div>
 
+              }
+              {
+                get(search, 'length') === 0 &&
+                <div className={s.hoveredSubtitle}>No results found</div>
+              }
+              {
+                get(search, 'length') > 0 &&
+                <div className={s.hoveredTitle}>Search Results</div>
+              }
+
+              <a className={s.clearFiltersButton} onClick={() => this.clearFilters()}>
+                <ClearIcon style={{color: 'white'}}/>
+                &nbsp;Clear
+              </a>
+            </article>
+          }
         </div>
 
         <ul ref={(elem) => {this.list = elem} } className={s.projectList} onWheel={this.mapScroll.bind(this)}>

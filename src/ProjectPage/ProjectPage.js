@@ -87,7 +87,7 @@ class ProjectPage extends React.Component {
 
         <div className={s.bodyContainer}>
 
-          <p className={s.shortDescription} dangerouslySetInnerHTML={{__html:this.props.project.short_description}}></p>
+          <p className={s.shortDescription} dangerouslySetInnerHTML={{ __html: this.props.project.short_description}}></p>
           <br/>
           <div className={s.slideshow}>
             {this.props.project.slide_show.map((slide, index) =>
@@ -99,7 +99,7 @@ class ProjectPage extends React.Component {
             )}
           </div>
           <div className={s.slideshowNavigation}>
-            <div className={s.navDot} className ={s.one}></div>
+            <div className={`${s.navDot} ${s.one}`}></div>
 
           </div>
 

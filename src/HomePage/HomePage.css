@@ -49,9 +49,10 @@
   width: 100%;
   text-align: center;
   color: white;
+  opacity: 0;
 }
 
-.projectQuestion {
+.hoveredTitle {
   font-size: 44px;
   line-height: 1.2;
   vertical-align: middle;
@@ -60,7 +61,6 @@
   margin-left: auto;
   margin-right: auto;
   transition: all 0.5s ease;
-  opacity: 0;
   margin-top: 50px;
 }
 
@@ -69,7 +69,8 @@
   opacity: 1;
 }
 
-.projectTopics {
+.hoveredSubtitle {
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   margin-top: 10px;
   height: 20px;
@@ -77,6 +78,15 @@
 
 .topicIcon {
   width: 30px;
+}
+
+.clearFiltersButton {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 1300px) {

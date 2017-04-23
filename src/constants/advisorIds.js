@@ -6,3 +6,13 @@ export const advisorsIds = {
   KATHLEEN: '11',
   ROBIN: '12',
 }
+
+export const advisorNames = {
+  '10': 'Andrew Lazarow',
+  '4': 'Nancy Hechinger',
+  '3': 'Gabe Barcia-Colombo',
+  '2': 'Katherine Dillon',
+  '11': 'Kathleen Wilson',
+  '12': 'Robin Reid',
+}
+

@@ -13,7 +13,7 @@
 }*/
 
 .logoHeader {
-    background-color: #C8CDD8;
+  background-color: #C8CDD8;
 }
 
 .logoImage {
@@ -128,13 +128,13 @@
 }
 
 .caption {
-    font-family: SofiaProRegular;
-    font-size: 10px;
-    color: #3C3B49;
-    letter-spacing: 0.33px;
-    line-height: 1.3;
-    width: 70%;
-    margin-top: 10px;
+  font-family: SofiaProRegular;
+  font-size: 10px;
+  color: #3C3B49;
+  letter-spacing: 0.33px;
+  line-height: 1.3;
+  width: 70%;
+  margin-top: 10px;
 }
 
 /* COLOR CHANGING NOT WORKING FOR SOME REASON - defaulting to pink */
