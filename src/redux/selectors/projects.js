@@ -1,4 +1,4 @@
-import {defaultsDeep, get} from 'lodash'
+import {defaultsDeep, forEach} from 'lodash'
 
 export const selectProject = (state, slug) => {
   const project = state.projects[slug]
@@ -24,7 +24,16 @@ export const getFilteredProjects = state => {
     // if filters.category is set, update matchCategory boolean
     if (filters.category !== '') {
       // we use lodash.get here to protect
-      matchCategory = (project.topics[0] && get(project, 'topics[0].slug') === filters.category) || (project.topics[1] && get(project, 'topics[1].slug') === filters.category)
+      // matchCategory = (project.topics[0] && get(project, 'topics[0].slug') === filters.category) || (project.topics[1] && get(project, 'topics[1].slug') === filters.category)
+      forEach(project.topics, topic => {
+        if (topic.slug !== filters.category) {
+          matchCategory = false
+        } else {
+          matchCategory = true
+          return false
+        }
+      })
+
     }
 
     if (filters.search !== null && filters.search !== []) {

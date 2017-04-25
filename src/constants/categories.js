@@ -19,4 +19,8 @@ export const categories = {
   'social-good': 'Social Good',
   'speculative-design': 'Speculative Design',
   'storytelling': 'Storytelling',
+  'tool': 'Tool',
+  'uxui': '	UX/UI',
+  'vr': 'VR',
+  'wearables': 'Wearables',
 }
