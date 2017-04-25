@@ -55,7 +55,7 @@ class HomePage extends React.Component {
   mouseIn(project) {
     this.setState({
       projectHeading: project.project_question,
-      projectTopics: project.topics[0].name,
+      projectTopics: project.topics.length > 0 ? project.topics[0].name : '',
     })
   }
 
