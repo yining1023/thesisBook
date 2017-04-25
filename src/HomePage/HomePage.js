@@ -53,9 +53,13 @@ class HomePage extends React.Component {
   }
 
   mouseIn(project) {
+    const topics = project.topics.reduce((acc, val) => {
+      return acc + val.name + ' | '
+    }, '| ')
+
     this.setState({
       projectHeading: project.project_question,
-      projectTopics: project.topics.length > 0 ? project.topics[0].name : '',
+      projectTopics: topics,
     })
   }
 
