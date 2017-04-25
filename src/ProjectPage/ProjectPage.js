@@ -76,9 +76,8 @@ class ProjectPage extends React.Component {
           <hr className={s.separator}/>
 
           <div className={s.tagsTopicsAdvisor}>
-            <p>Topics: {this.props.project.topics[0].name}</p>
-            <p>Tags: {this.props.project.tags.map((tag, i) =>
-                <span key={i}>{tag.name}, </span>
+            <p>Category: {this.props.project.topics.map((topic, i) =>
+                <span key={i}>{topic.name}, </span>
               )}
             </p>
             <p>Advisor: {this.props.project.advisor_name}</p>

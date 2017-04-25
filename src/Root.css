@@ -9,8 +9,8 @@
   bottom: 0;
   overflow: auto;
   z-index: 1;
-  animation: colorchange 60s;
-  -webkit-animation: colorchange 60s;
+  animation: colorchange 120s;
+  -webkit-animation: colorchange 120s;
   animation-iteration-count: infinite;
 }
 
@@ -37,7 +37,7 @@ a {
 }
 
 body {
-  animation: colorchange 60s;
-  -webkit-animation: colorchange 60s;
+  animation: colorchange 120s;
+  -webkit-animation: colorchange 120s;
   animation-iteration-count: infinite;
 }

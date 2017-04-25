@@ -24,7 +24,7 @@ export const getFilteredProjects = state => {
     // if filters.category is set, update matchCategory boolean
     if (filters.category !== '') {
       // we use lodash.get here to protect
-      matchCategory = get(project, 'topics[0].slug') === filters.category
+      matchCategory = (project.topics[0] && get(project, 'topics[0].slug') === filters.category) || (project.topics[1] && get(project, 'topics[1].slug') === filters.category)
     }
 
     if (filters.search !== null && filters.search !== []) {
@@ -53,10 +53,6 @@ const defaultProject = {
     caption: '',
   },
   topics: [{
-    name: '',
-    slug: '',
-  }],
-  tags: [{
     name: '',
     slug: '',
   }],
