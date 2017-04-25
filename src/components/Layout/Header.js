@@ -52,7 +52,7 @@ class Header extends React.Component {
             openSecondary={true}
             open={this.state.showDrawer}
             onRequestChange={(showDrawer) => this.setState({showDrawer})}
-            containerStyle={{ backgroundColor: '#2b296e' }}
+            containerStyle={{ backgroundColor: 'rgba(30, 30, 30, 0.6)' }}
           >
             <FilterMenu />
           </Drawer>
