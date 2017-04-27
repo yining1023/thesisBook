@@ -20,9 +20,9 @@ const itemStyle = {
 
 export class AboutPage extends React.Component {
 
-  componentDidMount() {
-    document.title = title
-  }
+  // componentDidMount() {
+  //   document.title = title
+  // }
 
   render() {
     const match = this.props.match
