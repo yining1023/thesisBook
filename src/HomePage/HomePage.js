@@ -131,10 +131,10 @@ class HomePage extends React.Component {
         </div>
 
         <ul ref={(elem) => {this.list = elem} } className={s.projectList} onWheel={this.mapScroll.bind(this)}>
-          {this.props.visibleProjects
-            .filter(project => { return project.student_id !== "" })
-            .map(project =>
-            <Card className={s.projectCard}
+          { this.props.visibleProjects
+            .filter(project => { return project.student_name !== null })
+            .map( (project, index) =>
+            <Card className={`${s.projectCard} ${(index === (this.props.visibleProjects.length - 1)) ? s.lastProjectCard : ''}`}
                   key={project.student_id}
                   onClick={this.navigateTo.bind(this, `/project/${project.student_slug}`) }
                   onMouseEnter={this.mouseIn.bind(this, project)}

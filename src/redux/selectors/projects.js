@@ -1,4 +1,4 @@
-import {defaultsDeep, forEach, reduce} from 'lodash'
+import {defaultsDeep, forEach, reduce, shuffle} from 'lodash'
 
 export const selectProject = (state, slug) => {
   const project = state.projects[slug]
@@ -10,7 +10,7 @@ export const getFilteredProjects = state => {
   const projects = Object.values(state.projects)
   const filters = state.filters
 
-  return projects.filter(project => {
+  return shuffle(projects).filter(project => {
     // by default let's assume both advisor and categories match for all projects
     let matchAdvisor = true
     let matchCategory = true
