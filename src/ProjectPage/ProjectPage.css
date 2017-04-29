@@ -22,6 +22,10 @@
   margin-top: 30px;
 }
 
+.sliderImage {
+  width: 100%;
+}
+
 .greyHeader {
   min-height: 300px;
   background-color: #C8CDD8;
@@ -171,4 +175,10 @@
 
 .one {
   background-color: green;
+}
+
+@media screen and (max-width: 550px) {
+  .longDescription {
+    width: 100%;
+  }
 }

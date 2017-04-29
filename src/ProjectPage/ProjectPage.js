@@ -12,6 +12,10 @@ import {selectProject} from '../redux/selectors/projects'
 import {isEmpty} from 'lodash'
 import {Link} from 'react-router-dom'
 import logo from '../img/itp-logo-blue.svg'
+import Slider from 'react-slick'
+import ArrowLeft from 'material-ui/svg-icons/hardware/keyboard-arrow-left'
+import ArrowRight from 'material-ui/svg-icons/hardware/keyboard-arrow-right'
+import {IconButton} from 'material-ui'
 
 const mapStateToProps = (state, ownProps) => ({
   projects: state.projects,
@@ -51,13 +55,13 @@ class ProjectPage extends React.Component {
           this.getFullProject(prj.student_id)
         })
     }
+
     return this.getFullProject(project.student_id)
   }
 
 
 
   render() {
-
     return (
       <div className={s.content}>
 
@@ -88,15 +92,29 @@ class ProjectPage extends React.Component {
 
           <p className={s.shortDescription} dangerouslySetInnerHTML={{ __html: this.props.project.short_description}}></p>
           <br/>
-          <div className={s.slideshow}>
-            {this.props.project.slide_show.map((slide, index) =>
-              <div key={slide.title} className={index+1}>
-                <img rel="external" src={slide.src} />
-                <p className={s.caption}>{slide.caption}</p>
-              </div>
 
-            )}
-          </div>
+          {
+            this.props.project.slide_show.length > 0 &&
+            <Slider
+              dots={true}
+              infinite={true}
+              arrows={true}
+              autoplay={true}
+              autoplaySpeed={5000}
+              prevArrow={<ArrowLeft />}
+              nextArrow={<ArrowRight />}
+              slidesToShow={1}
+              slidesToScroll={1}
+            >
+              {this.props.project.slide_show.map(slide =>
+                <div>
+                  <img rel="external" className={s.sliderImage} src={slide.src}/>
+                  <p className={s.caption}>{slide.caption}</p>
+                </div>
+              )}
+            </Slider>
+          }
+
           <div className={s.slideshowNavigation}>
             <div className={`${s.navDot} ${s.one}`}></div>
 
