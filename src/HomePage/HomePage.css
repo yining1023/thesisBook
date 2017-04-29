@@ -34,10 +34,11 @@
 }
 
 .verticalText {
-  font-size: 15px;
+  font-size: 12px !important;
   color: #413ca0 !important;
   transform: rotate(-90deg);
-  margin-top: 130px;
+  margin-top: 160px;
+  font-weight: 500;
 }
 
 .a {
@@ -77,7 +78,7 @@
 }
 
 .topicIcon {
-  width: 30px;
+  width: 35px;
 }
 
 .clearFiltersButton {

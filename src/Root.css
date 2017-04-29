@@ -22,7 +22,7 @@ a {
 {
   0%   {background: #403ca0;}
   25%  {background: mediumpurple;}
-  50%  {background: tomato;}
+  50%  {background: #403ca0;}
   75%  {background: mediumpurple;}
   100% {background: #403ca0;}
 }
@@ -31,13 +31,13 @@ a {
 {
   0%   {background: #403ca0;}
   25%  {background: mediumpurple;}
-  50%  {background: tomato;}
+  50%  {background: #403ca0;}
   75%  {background: mediumpurple;}
   100% {background: #403ca0;}
 }
 
 body {
-  animation: colorchange 120s;
-  -webkit-animation: colorchange 120s;
+  animation: colorchange 180s;
+  -webkit-animation: colorchange 180s;
   animation-iteration-count: infinite;
 }

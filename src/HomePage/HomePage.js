@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../redux/actions/filters'
 import {getFilteredProjects} from '../redux/selectors/projects'
 import {Card, CardText} from 'material-ui'
-import topicIcon from '../img/topic-icon.svg'
 import Header from '../components/Layout/Header'
 import {categories} from '../constants/categories'
 import {advisorNames} from '../constants/advisorIds'
@@ -18,7 +17,7 @@ const mapStateToProps = state => ({
 })
 
 const iconStyles = {
-  marginLeft: 17,
+  marginLeft: 15,
   marginTop: 20
 }
 
@@ -53,7 +52,8 @@ class HomePage extends React.Component {
   }
 
   mouseIn(project) {
-    const topics = project.topics.reduce((acc, val) => {
+    const topics = project.topics.reduce((acc, val, index) => {
+      if (index === 0) return acc + val.name
       return acc + ' | ' + val.name
     }, '')
 
@@ -139,7 +139,7 @@ class HomePage extends React.Component {
                   onClick={this.navigateTo.bind(this, `/project/${project.student_slug}`) }
                   onMouseEnter={this.mouseIn.bind(this, project)}
                   onMouseLeave={this.mouseOut.bind(this)}>
-              <img className={`${s.topicIcon}`} src={topicIcon} alt={"data vis"} style={iconStyles} />
+              <img className={`${s.topicIcon}`} src={require(`../img/${(project.topics.length > 0) ? project.topics[0].slug : 'education'}.svg`)} alt={"topic-icon"} style={iconStyles} />
               <CardText className={s.verticalText}>
                 {project.student_name}
               </CardText>

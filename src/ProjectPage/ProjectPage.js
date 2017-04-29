@@ -25,6 +25,11 @@ const mapStateToProps = (state, ownProps) => ({
 
 const actions = { getProject, getProjects }
 
+const iconStyles = {
+  marginTop: 11,
+  width: 50
+}
+
 // can write a function outside of the class
 
 class ProjectPage extends React.Component {
@@ -73,15 +78,20 @@ class ProjectPage extends React.Component {
 
         <div className={s.greyHeader}>
 
-          <div className={s.topicIcon}></div>
-          <h3 className={s.projectTitle}>{this.props.project.project_title}</h3>
+          <div className={`${s.topicIcon}`}>
+            <img src={require(`../img/${(project.topics.length > 0) ? project.topics[0].slug : 'education'}.svg`)} alt={"topic-icon"} style={iconStyles} />
+            <img src={require(`../img/${(this.props.project.topics.length > 0) ? this.props.project.topics[0].slug : 'education'} copy.svg`)} alt={"topic-icon"} style={iconStyles} color="#292755" />
+          </div>
+            <h3 className={s.projectTitle}>{this.props.project.project_title}</h3>
           <h4 className={s.studentName}>{this.props.project.student_name}</h4>
 
           <hr className={s.separator}/>
 
           <div className={s.tagsTopicsAdvisor}>
             <p>Category: {this.props.project.topics.map((topic, i) =>
-                <span key={i}>{topic.name}, </span>
+                <span key={i}>{topic.name}
+                {i === this.props.project.topics.length - 1 ? '' : ', '}
+                </span>
               )}
             </p>
             <p>Advisor: {this.props.project.advisor_name}</p>

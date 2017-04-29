@@ -64,7 +64,7 @@ class FilterMenu extends React.Component {
           {
             map(
               categories,
-              (name, slug) => <MenuItem key={slug} value={slug} primaryText={capitalize(name)} />
+              (name, slug) => <MenuItem key={slug} value={slug} primaryText={name} />
             )
           }
         </SelectField>
