@@ -81,7 +81,7 @@ class ProjectPage extends React.Component {
           <div className={`${s.topicIcon}`}>
             <img src={require(`../img/${(this.props.project.topics.length > 0) ? this.props.project.topics[0].slug : 'education'} copy.svg`)} alt={"topic-icon"} style={iconStyles} color="#292755" />
           </div>
-            <h3 className={s.projectTitle}>{this.props.project.project_title}</h3>
+            <h3 className={s.projectTitle} dangerouslySetInnerHTML={{ __html: this.props.project.project_title}}/>
           <h4 className={s.studentName}>{this.props.project.student_name}</h4>
 
           <hr className={s.separator}/>
