@@ -79,7 +79,6 @@ class ProjectPage extends React.Component {
         <div className={s.greyHeader}>
 
           <div className={`${s.topicIcon}`}>
-            <img src={require(`../img/${(project.topics.length > 0) ? project.topics[0].slug : 'education'}.svg`)} alt={"topic-icon"} style={iconStyles} />
             <img src={require(`../img/${(this.props.project.topics.length > 0) ? this.props.project.topics[0].slug : 'education'} copy.svg`)} alt={"topic-icon"} style={iconStyles} color="#292755" />
           </div>
             <h3 className={s.projectTitle}>{this.props.project.project_title}</h3>
