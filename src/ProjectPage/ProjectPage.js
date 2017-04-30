@@ -125,17 +125,18 @@ class ProjectPage extends React.Component {
             </Slider>
           }
 
-          <div className={s.slideshowNavigation}>
-            <div className={`${s.navDot} ${s.one}`}></div>
+          {/*<div className={s.slideshowNavigation}>*/}
+            {/*<div className={`${s.navDot} ${s.one}`}></div>*/}
 
-          </div>
+          {/*</div>*/}
 
           <div className={s.longDescription}>
             <p className={s.bodyCopy} dangerouslySetInnerHTML={{ __html: project.description }} />
+            {/*<div>*/}
+            <iframe src="//player.vimeo.com/video/166639790" width="100%" height="400px" />
+            {/*</div>*/}
+            {/*<p className={s.addLinks}><a target="_blank" rel="external" href={project.video_presentation_url}>Video Presentation</a></p>*/}
             <p className={s.bodyCopy} dangerouslySetInnerHTML={{ __html: project.further_reading }} />
-
-            <p className={s.addLinks}><a target="_blank" rel="external" href={project.video_presentation_url}>Video Presentation</a></p>
-
             {project.project_url ? <p className={s.addLinks}><a target="_blank" rel="external" href={project.project_url}>Project Link</a></p> : null}
 
           </div>
