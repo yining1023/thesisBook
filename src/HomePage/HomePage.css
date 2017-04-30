@@ -22,6 +22,7 @@
   height: 280px;
   margin: 9px;
   width: 64px;
+  box-shadow: none!important;
   border-radius: 0 !important;
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
 }
@@ -29,15 +30,17 @@
 @media all and (min-width: 450px) {
   .projectCard:hover {
     transform: translateY(-40px);
-    background-color: yellow;
+    background-color: #EBFF32 !important;
   }
 }
 
 .verticalText {
-  font-size: 15px;
-  color: #413ca0 !important;
+  font-family: SofiaProRegular, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #3E33B7 !important;
   transform: rotate(-90deg);
-  margin-top: 130px;
+  margin-top: 160px !important;
 }
 
 .a {
@@ -71,17 +74,22 @@
 
 .hoveredSubtitle {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.3rem;
-  margin-top: 10px;
+  font-family: SofiaProBold;
+  font-size: 13px !important;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1.1px;
+  margin-top: 25px;
   /*height: 20px;*/
 }
 
 .topicIcon {
   width: 30px;
+  padding-top: 0px;
 }
 
 .clearFiltersButton {
-  font-family: 'Roboto', sans-serif;
+  font-family: SofiaProRegular, sans-serif;
   cursor: pointer;
   color: white;
   display: flex;
@@ -94,15 +102,19 @@
 
 @media screen and (min-width: 1300px) {
   .projectQuestion {
-    font-size: 42px !important;
+
+    font-weight: bold;
   }
 }
 
 @media screen and (max-height: 770px) {
   .hoveredTitle {
-    font-size: 2.7rem;
+    font-family: Source Serif Pro;
+    font-weight: bold;
+    font-size: 5rem;
   }
   .hoveredSubtitle {
+    font-family: SofiaProRegular;
     font-size: 1.1rem;
   }
 }

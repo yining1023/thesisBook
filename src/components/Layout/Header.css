@@ -22,7 +22,7 @@
 }
 
 .title {
-  width: 70px;
+  width: 60px;
   margin: 25px 20px 0 10px;
 }
 
@@ -39,5 +39,6 @@
 }
 
 .searchBox {
+  font-family: SofiaProBold!important;
   color: white !important;
 }

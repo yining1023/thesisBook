@@ -9,9 +9,10 @@ import s from './ProjectPage.css'
 import {connect} from 'react-redux'
 import {getProject, getProjects} from '../redux/actions/projects'
 import {selectProject} from '../redux/selectors/projects'
+import topicIcon from '../img/topic-icon.svg'
 import {isEmpty} from 'lodash'
 import {Link} from 'react-router-dom'
-import logo from '../img/itp-logo-blue.svg'
+import logo from '../img/itp-logo.svg'
 
 const mapStateToProps = (state, ownProps) => ({
   projects: state.projects,
@@ -69,7 +70,9 @@ class ProjectPage extends React.Component {
 
         <div className={s.greyHeader}>
 
-          <div className={s.topicIcon}></div>
+          <div className={s.iconContainer}>
+            <img className={`${s.topicIcon}`} src={topicIcon} alt={"data vis"} />
+          </div>
           <h3 className={s.projectTitle}>{this.props.project.project_title}</h3>
           <h4 className={s.studentName}>{this.props.project.student_name}</h4>
 
