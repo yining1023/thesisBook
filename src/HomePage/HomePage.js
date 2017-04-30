@@ -123,7 +123,7 @@ class HomePage extends React.Component {
               }
 
               <a className={s.clearFiltersButton} onClick={() => this.clearFilters()}>
-                <ClearIcon style={{color: 'white'}}/>
+                <ClearIcon style={{color: 'white', marginBottom: '4px'}}/>
                 &nbsp;CLEAR
               </a>
             </article>

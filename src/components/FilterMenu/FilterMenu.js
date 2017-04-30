@@ -58,7 +58,7 @@ class FilterMenu extends React.Component {
           floatingLabelStyle={{ color: 'rgba(255, 255, 255, 0.8)' }}
           labelStyle={{color: 'white'}}
           style={{fontSize: '14px'}}
-          selectedMenuItemStyle={{fontWeight: 900, color: '#403ca0'}}
+          selectedMenuItemStyle={{fontWeight: 900, color: '#3E33B7'}}
         >
           <MenuItem value='' primaryText='' />
           {
@@ -76,7 +76,7 @@ class FilterMenu extends React.Component {
           onChange={this.handleAdvisorChange}
           floatingLabelStyle={{ color: 'rgba(255, 255, 255, 0.8)' }}
           labelStyle={{color: 'white'}}
-          selectedMenuItemStyle={{color: '#403ca0'}}
+          selectedMenuItemStyle={{color: '#3E33B7'}}
           style={{fontSize: '14px'}}
         >
           <MenuItem value='' primaryText='' />
