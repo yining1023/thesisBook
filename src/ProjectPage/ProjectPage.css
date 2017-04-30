@@ -131,6 +131,19 @@
   width: 100%;
 }
 
+.longDescription a {
+  color: #333340 !important;
+  text-decoration: none;
+  border-bottom: 2px solid #333340;
+  transition: ease .25s;
+}
+
+.longDescription a:hover {
+  color: #514AD7 !important;
+  border-bottom: 2px solid #514AD7;
+  transition: ease .25s;
+}
+
 
 .slideshow img {
   width: 100%;

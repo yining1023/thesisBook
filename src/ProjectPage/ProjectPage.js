@@ -135,6 +135,7 @@ class ProjectPage extends React.Component {
             <p className={s.bodyCopy} dangerouslySetInnerHTML={{ __html: project.further_reading }} />
 
             <p className={s.addLinks}><a target="_blank" rel="external" href={project.video_presentation_url}>Video Presentation</a></p>
+
             {project.project_url ? <p className={s.addLinks}><a target="_blank" rel="external" href={project.project_url}>Project Link</a></p> : null}
 
           </div>
