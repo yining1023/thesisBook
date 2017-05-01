@@ -27,6 +27,10 @@
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
 }
 
+.lastProjectCard {
+  margin-right: 85px;
+}
+
 @media all and (min-width: 450px) {
   .projectCard:hover {
     transform: translateY(-40px);
@@ -37,10 +41,17 @@
 .verticalText {
   font-family: SofiaProRegular, sans-serif;
   font-weight: bold;
+<<<<<<< HEAD
   font-size: 13px;
   color: #3E33B7 !important;
   transform: rotate(-90deg);
   margin-top: 160px !important;
+=======
+  font-size: 12px !important;
+  color: #3E33B7 !important;
+  transform: rotate(-90deg);
+  margin-top: 160px;
+>>>>>>> 631300a083a943ffe788efbc63365f687f3bdf57
 }
 
 .a {
@@ -56,6 +67,7 @@
 }
 
 .hoveredTitle {
+  font-family: Source Serif Pro;
   font-size: 3.5rem;
   line-height: 1.2;
   vertical-align: middle;
@@ -73,7 +85,10 @@
 }
 
 .hoveredSubtitle {
+<<<<<<< HEAD
   font-family: 'Roboto', sans-serif;
+=======
+>>>>>>> 631300a083a943ffe788efbc63365f687f3bdf57
   font-family: SofiaProBold;
   font-size: 13px !important;
   text-transform: uppercase;
@@ -84,7 +99,11 @@
 }
 
 .topicIcon {
+<<<<<<< HEAD
   width: 30px;
+=======
+  width: 35px;
+>>>>>>> 631300a083a943ffe788efbc63365f687f3bdf57
   padding-top: 0px;
 }
 
@@ -102,15 +121,23 @@
 
 @media screen and (min-width: 1300px) {
   .projectQuestion {
+<<<<<<< HEAD
 
     font-weight: bold;
+=======
+    /*font-size: 42px !important;*/
+>>>>>>> 631300a083a943ffe788efbc63365f687f3bdf57
   }
 }
 
 @media screen and (max-height: 770px) {
   .hoveredTitle {
+<<<<<<< HEAD
     font-family: Source Serif Pro;
     font-weight: bold;
+=======
+    /*font-size: 2.7rem;*/
+>>>>>>> 631300a083a943ffe788efbc63365f687f3bdf57
     font-size: 5rem;
   }
   .hoveredSubtitle {

@@ -15,12 +15,23 @@
 .navigationLink {
   text-decoration: none;
   font-family: SofiaProRegular !important;
+<<<<<<< HEAD
   font-weight: bold;
+=======
+>>>>>>> 631300a083a943ffe788efbc63365f687f3bdf57
   color: rgba(255, 255, 255, 0.8);
-  font-weight: 400;
   margin-top: 26px;
+<<<<<<< HEAD
   letter-spacing: .1em !important;
   border-bottom: 1.9px solid;
+=======
+  line-height: 2;
+  border-bottom: 1.3px solid;
+}
+
+.navigationLink:hover {
+  opacity: 0.5;
+>>>>>>> 631300a083a943ffe788efbc63365f687f3bdf57
 }
 
 .navigationLink:hover {

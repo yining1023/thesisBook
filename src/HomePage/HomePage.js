@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../redux/actions/filters'
 import {getFilteredProjects} from '../redux/selectors/projects'
 import {Card, CardText} from 'material-ui'
-import topicIcon from '../img/topic-icon.svg'
 import Header from '../components/Layout/Header'
 import {categories} from '../constants/categories'
 import {advisorNames} from '../constants/advisorIds'
@@ -18,7 +17,7 @@ const mapStateToProps = state => ({
 })
 
 const iconStyles = {
-  marginLeft: 17,
+  marginLeft: 15,
   marginTop: 20
 }
 
@@ -53,9 +52,14 @@ class HomePage extends React.Component {
   }
 
   mouseIn(project) {
+    const topics = project.topics.reduce((acc, val, index) => {
+      if (index === 0) return acc + val.name
+      return acc + ' | ' + val.name
+    }, '')
+
     this.setState({
       projectHeading: project.project_question,
-      projectTopics: project.topics.length > 0 ? project.topics[0].name : '',
+      projectTopics: topics,
     })
   }
 
@@ -84,8 +88,8 @@ class HomePage extends React.Component {
         <div className={s.wrapper}>
           {
             <article className={`${s.projectQuestionContainer} ${this.state.projectHeading ? s.appear : '' }`}>
-              <div className={s.hoveredTitle}>
-                {this.state.projectHeading}
+              <div className={s.hoveredTitle} dangerouslySetInnerHTML={{ __html: this.state.projectHeading}}>
+                {/*{this.state.projectHeading}*/}
               </div>
               <div className={s.hoveredSubtitle}>
                 {this.state.projectTopics}
@@ -119,7 +123,7 @@ class HomePage extends React.Component {
               }
 
               <a className={s.clearFiltersButton} onClick={() => this.clearFilters()}>
-                <ClearIcon style={{color: 'white'}}/>
+                <ClearIcon style={{color: 'white', marginBottom: '4px'}}/>
                 &nbsp;CLEAR
               </a>
             </article>
@@ -127,13 +131,15 @@ class HomePage extends React.Component {
         </div>
 
         <ul ref={(elem) => {this.list = elem} } className={s.projectList} onWheel={this.mapScroll.bind(this)}>
-          {this.props.visibleProjects.map(project =>
-            <Card className={s.projectCard}
+          { this.props.visibleProjects
+            .filter(project => { return project.student_name !== null })
+            .map( (project, index) =>
+            <Card className={`${s.projectCard} ${(index === (this.props.visibleProjects.length - 1)) ? s.lastProjectCard : ''}`}
                   key={project.student_id}
                   onClick={this.navigateTo.bind(this, `/project/${project.student_slug}`) }
                   onMouseEnter={this.mouseIn.bind(this, project)}
                   onMouseLeave={this.mouseOut.bind(this)}>
-              <img className={`${s.topicIcon}`} src={topicIcon} alt={"data vis"} style={iconStyles} />
+              <img className={`${s.topicIcon}`} src={require(`../img/${(project.topics.length > 0) ? project.topics[0].slug : 'education'}.svg`)} alt={"topic-icon"} style={iconStyles} />
               <CardText className={s.verticalText}>
                 {project.student_name}
               </CardText>

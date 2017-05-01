@@ -1,4 +1,4 @@
-import {defaultsDeep, get} from 'lodash'
+import {defaultsDeep, forEach, reduce, shuffle} from 'lodash'
 
 export const selectProject = (state, slug) => {
   const project = state.projects[slug]
@@ -10,7 +10,7 @@ export const getFilteredProjects = state => {
   const projects = Object.values(state.projects)
   const filters = state.filters
 
-  return projects.filter(project => {
+  return shuffle(projects).filter(project => {
     // by default let's assume both advisor and categories match for all projects
     let matchAdvisor = true
     let matchCategory = true
@@ -24,7 +24,11 @@ export const getFilteredProjects = state => {
     // if filters.category is set, update matchCategory boolean
     if (filters.category !== '') {
       // we use lodash.get here to protect
-      matchCategory = (project.topics[0] && get(project, 'topics[0].slug') === filters.category) || (project.topics[1] && get(project, 'topics[1].slug') === filters.category)
+      // matchCategory = (project.topics[0] && get(project, 'topics[0].slug') === filters.category) || (project.topics[1] && get(project, 'topics[1].slug') === filters.category)
+      const alltopics = reduce(project.topics, (acc, topic) => {
+        return acc + topic.slug
+      }, '')
+      matchCategory = alltopics.indexOf(filters.category) === -1 ? false : true
     }
 
     if (filters.search !== null && filters.search !== []) {
