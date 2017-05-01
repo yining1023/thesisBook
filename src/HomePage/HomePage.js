@@ -88,8 +88,8 @@ class HomePage extends React.Component {
         <div className={s.wrapper}>
           {
             <article className={`${s.projectQuestionContainer} ${this.state.projectHeading ? s.appear : '' }`}>
-              <div className={s.hoveredTitle}>
-                {this.state.projectHeading}
+              <div className={s.hoveredTitle} dangerouslySetInnerHTML={{ __html: this.state.projectHeading}}>
+                {/*{this.state.projectHeading}*/}
               </div>
               <div className={s.hoveredSubtitle}>
                 {this.state.projectTopics}

@@ -82,7 +82,7 @@ class ProjectPage extends React.Component {
           <div className={`${s.topicIcon}`}>
             <img src={require(`../img/${(get(project, 'topics.0.slug') !== '') ? get(project, 'topics.0.slug') : 'education'} copy.svg`)} alt={"topic-icon"} style={iconStyles} color="#292755" />
           </div>
-            <h3 className={s.projectTitle} dangerouslySetInnerHTML={{ __html: project.project_title}}/>
+          <h3 className={s.projectTitle} dangerouslySetInnerHTML={{ __html: project.project_title}}/>
           <h4 className={s.studentName}>{project.student_name}</h4>
 
           <hr className={s.separator}/>
@@ -107,9 +107,11 @@ class ProjectPage extends React.Component {
             project.slide_show.length > 0 &&
             <Slider
               dots={true}
-              infinite={true}
+              dotsClass={`slick-dots ${s.slickDots}`}
+              // infinite={true}
               arrows={true}
-              autoplay={true}
+              // autoplay={true}
+              pauseOnHover={true}
               autoplaySpeed={5000}
               prevArrow={<ArrowLeft />}
               nextArrow={<ArrowRight />}
@@ -132,10 +134,10 @@ class ProjectPage extends React.Component {
 
           <div className={s.longDescription}>
             <p className={s.bodyCopy} dangerouslySetInnerHTML={{ __html: project.description }} />
-            {/*<div>*/}
-            <iframe src="//player.vimeo.com/video/166639790" width="100%" height="400px" />
-            {/*</div>*/}
+
+            {(project.video_presentation_url !== "") && <iframe src={project.video_presentation_url} width="100%" height="400px" />}
             {/*<p className={s.addLinks}><a target="_blank" rel="external" href={project.video_presentation_url}>Video Presentation</a></p>*/}
+
             <p className={s.bodyCopy} dangerouslySetInnerHTML={{ __html: project.further_reading }} />
             {project.project_url ? <p className={s.addLinks}><a target="_blank" rel="external" href={project.project_url}>Project Link</a></p> : null}
 
