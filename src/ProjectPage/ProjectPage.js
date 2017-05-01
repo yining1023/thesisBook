@@ -128,9 +128,10 @@ class ProjectPage extends React.Component {
             <Slider
               dots={true}
               dotsClass={`slick-dots ${s.slickDots}`}
-              // infinite={true}
+              infinite={true}
               arrows={true}
-              // autoplay={true}
+              autoplay={true}
+              adaptiveHeight={true}
               pauseOnHover={true}
               autoplaySpeed={5000}
               prevArrow={<ArrowLeft />}

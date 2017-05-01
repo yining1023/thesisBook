@@ -87,6 +87,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 65px;
+  white-space: pre-line;
   /*background: yellow;*/
  }
 
