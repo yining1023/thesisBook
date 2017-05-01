@@ -4,6 +4,7 @@ MIT License, Yining Shi
 
 Demo: 
 [https://itp.nyu.edu/thesis2017](https://itp.nyu.edu/thesis2017)
+or
 [https://thesis-book-itp-2017.firebaseapp.com](https://thesis-book-itp-2017.firebaseapp.com)
 
 ### Directory Layout
