@@ -16,6 +16,7 @@ import Slider from 'react-slick'
 import ArrowLeft from 'material-ui/svg-icons/hardware/keyboard-arrow-left'
 import ArrowRight from 'material-ui/svg-icons/hardware/keyboard-arrow-right'
 import {IconButton} from 'material-ui'
+import {setAdvisorFilter, setCategoryFilter} from '../redux/actions/filters'
 
 const mapStateToProps = (state, ownProps) => ({
   projects: state.projects,
@@ -23,11 +24,15 @@ const mapStateToProps = (state, ownProps) => ({
   project: selectProject(state, ownProps.match.params.studentSlug),
 })
 
-const actions = { getProject, getProjects }
+const actions = { getProject, getProjects, setAdvisorFilter, setCategoryFilter }
 
 const iconStyles = {
   marginTop: 11,
   width: 50
+}
+
+const createLeftArrow = () => {
+  return <ArrowLeft />
 }
 
 // can write a function outside of the class
@@ -64,10 +69,17 @@ class ProjectPage extends React.Component {
     return this.getFullProject(project.student_id)
   }
 
+  handleAdvisorChange = (value) => {
+    this.props.setAdvisorFilter(value)
+  }
 
+  handleCategoryChange = (value) => {
+    this.props.setCategoryFilter(value)
+  }
 
   render() {
     const { project } = this.props
+
     return (
       <div className={s.content}>
 
@@ -88,13 +100,21 @@ class ProjectPage extends React.Component {
           <hr className={s.separator}/>
 
           <div className={s.tagsTopicsAdvisor}>
-            <p>Category: {project.topics.map((topic, i) =>
-                <span key={i}>{topic.name}
+            <p>Category:&nbsp;{project.topics.map((topic, i) =>
+              <span key={i}>
+                <Link to="/" onClick={() => this.handleCategoryChange(topic.slug)}>
+                  {topic.name}
+                </Link>
                 {i === project.topics.length - 1 ? '' : ', '}
-                </span>
+              </span>
               )}
             </p>
-            <p>Advisor: {project.advisor_name}</p>
+
+              <p>Advisor:&nbsp;
+                <Link to="/" onClick={() => this.handleAdvisorChange(project.advisor_id)}>
+                  {project.advisor_name}
+                </Link>
+              </p>
           </div>
         </div>
 
@@ -117,6 +137,7 @@ class ProjectPage extends React.Component {
               nextArrow={<ArrowRight />}
               slidesToShow={1}
               slidesToScroll={1}
+              swipe
             >
               {project.slide_show.map(slide =>
                 <div>
