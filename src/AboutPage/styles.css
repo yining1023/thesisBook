@@ -67,3 +67,11 @@ pre {
     width: 80%;
   }
 }
+
+p a {
+  border-bottom: solid 1px;
+}
+
+p a:hover {
+  color: white;
+}

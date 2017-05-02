@@ -1,10 +1,17 @@
 import React from 'react'
 import {html} from './credit.md'
+import s from './styles.css'
 
 export const AboutCreditsPage = () => {
   return (
     <div>
-      <p>Coming soon!</p>
+      <p>THESIS ARCHIVE 2016 WEBSITE</p>
+      <p>Katherine Dillon, Team Leader</p>
+      <p>Nancy Hechinger, Project Consultant</p>
+      <p>Rebecca S Lieberman, Designer</p>
+      <p><a href="http://www.1023.io" target="_blank">Yining Shi</a>, Front-end Developer</p>
+      <p>Yen Chen, Back-end Developer</p>
+      <p>Alejandro Matamala, Production Associate</p>
       {/*<p>PROJECT REVIEWERS</p>*/}
 
 
