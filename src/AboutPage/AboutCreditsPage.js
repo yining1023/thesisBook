@@ -5,7 +5,7 @@ import s from './styles.css'
 export const AboutCreditsPage = () => {
   return (
     <div>
-      <p>THESIS ARCHIVE 2016 WEBSITE</p>
+      <p>THESIS ARCHIVE 2017 WEBSITE</p>
       <p>Katherine Dillon, Team Leader</p>
       <p>Nancy Hechinger, Project Consultant</p>
       <p>Rebecca S Lieberman, Designer</p>
