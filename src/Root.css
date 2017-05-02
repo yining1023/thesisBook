@@ -1,5 +1,5 @@
 .container {
-  background: #403ca0;
+  /*background: #403ca0;*/
   font-family: 'Source Serif Pro', serif;
   height: 100%;
 }
@@ -9,8 +9,35 @@
   bottom: 0;
   overflow: auto;
   z-index: 1;
+  animation: colorchange 120s;
+  -webkit-animation: colorchange 120s;
+  animation-iteration-count: infinite;
 }
 
 a {
   color: rgba(255, 255, 255, 0.8);
 }
+
+/*@keyframes colorchange*/
+/*{*/
+  /*0%   {background: #403ca0;}*/
+  /*25%  {background: mediumpurple;}*/
+  /*50%  {background: #403ca0;}*/
+  /*75%  {background: mediumpurple;}*/
+  /*100% {background: #403ca0;}*/
+/*}*/
+
+/*@-webkit-keyframes colorchange !* Safari and Chrome *!*/
+/*{*/
+  /*0%   {background: #403ca0;}*/
+  /*25%  {background: mediumpurple;}*/
+  /*50%  {background: #403ca0;}*/
+  /*75%  {background: mediumpurple;}*/
+  /*100% {background: #403ca0;}*/
+/*}*/
+
+/*body {*/
+  /*animation: colorchange 180s;*/
+  /*-webkit-animation: colorchange 180s;*/
+  /*animation-iteration-count: infinite;*/
+/*}*/

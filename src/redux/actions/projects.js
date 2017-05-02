@@ -4,7 +4,7 @@ import {reduce} from 'lodash'
 
 export const getProjects = () => dispatch => {
   dispatch(getProjectsRequestAction())
-  return axios.get('https://itp.nyu.edu/ranch/proxy/proxy.php?mode=native&url=https://itp.nyu.edu/thesis2016/wp-content/themes/itpthesis/api2.php?student_id=-1')
+  return axios.get('https://itp.nyu.edu/ranch/proxy/proxy.php?mode=native&url=https://itp.nyu.edu/thesis2017/wp-content/themes/itpthesis/api.php?student_id=-1')
     .then(response => {
 
       // convert array of projects to object by id
@@ -37,7 +37,7 @@ const getProjectsFailedAction = error => ({
 export const getProject = id => dispatch => {
   dispatch(getProjectRequestAction())
 
-  return axios.get(`https://itp.nyu.edu/ranch/proxy/proxy.php?mode=native&url=https://itp.nyu.edu/thesis2016/wp-content/themes/itpthesis/api2.php?student_id=${id}`)
+  return axios.get(`https://itp.nyu.edu/ranch/proxy/proxy.php?mode=native&url=https://itp.nyu.edu/thesis2017/wp-content/themes/itpthesis/api.php?student_id=${id}`)
     .then(response => dispatch(getProjectSucceededAction(response.data)))
     .catch(error => dispatch(getProjectFailedAction(error)))
 }

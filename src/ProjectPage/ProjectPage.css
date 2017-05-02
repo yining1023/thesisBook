@@ -3,5 +3,230 @@
   bottom: 0;
   overflow: auto;
   z-index: 1;
+  background-color: white;
 }
 
+/*a {
+  color: #333340 !important;
+  text-decoration: none;
+  border-bottom: 2px solid #333340;
+}*/
+
+.logoHeader {
+  background-color: #3E33B7;
+}
+
+.logoImage {
+  width: 60px;
+  margin-left: 50px;
+  margin-top: 25px;
+}
+
+.sliderImage {
+  width: 100%;
+}
+
+.greyHeader {
+  min-height: 300px;
+  background-color: #3E33B7;
+  text-align: center;
+  color: #3E33B7;
+  padding-top: 20px;
+  padding-left: 18%;
+  padding-right: 18%;
+  padding-bottom: 40px;
+  line-height: 1.2;
+}
+
+.topicIcon {
+  width: 72px;
+  height: 72px;
+  border:3px solid #EBFF32;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectTitle {
+  font-family: Source Serif Pro;
+  color: white;
+  font-weight: bold !important;
+  font-size: 46px;
+  line-height: 1.2;
+}
+
+/*.projectQuestion {
+  font-family: Source Serif Pro;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.4;
+  letter-spacing: .5;
+  padding-left: 5%;
+  padding-right: 5%;
+}*/
+
+.studentName, .shortDescription {
+  width: 80%;
+  margin: 0 auto 0 auto;
+  font-family: SofiaProBold;
+  font-size: 22px;
+  letter-spacing: 0.2px;
+  line-height: 1.3;
+}
+
+.studentName {
+  color: white;
+}
+
+.shortDescription {
+  color: #292755;
+}
+
+.bodyContainer {
+  max-width: 752px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 65px;
+  white-space: pre-line;
+  /*background: yellow;*/
+ }
+
+.separator {
+  width: 60px;
+  height: 3px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: white;
+  border: none;
+}
+
+.tagsTopicsAdvisor p {
+  display: inline !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: SofiaProBold;
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 0.36px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.tagsTopicsAdvisor p a {
+  border-bottom: solid 1px;
+}
+
+.tagsTopicsAdvisor p a:hover {
+  color: white;
+}
+
+.longDescription {
+  width: 80%;
+  margin: 0 auto 0 auto;
+  margin-bottom: 100px;
+}
+
+.longDescription p, .longDescription ul {
+  font-family: SourceSerifPro-Regular;
+  font-size: 16px;
+  color: #333340;
+  letter-spacing: 0.3px;
+  margin-left: 0px !important;
+  width: 100%;
+}
+
+.longDescription a {
+  color: #333340 !important;
+  text-decoration: none;
+  border-bottom: 2px solid #333340;
+  transition: ease .25s;
+}
+
+.longDescription a:hover {
+  color: #514AD7 !important;
+  border-bottom: 2px solid #514AD7;
+  transition: ease .25s;
+}
+
+
+.slideshow img {
+  width: 100%;
+}
+
+.caption {
+  font-family: SofiaProRegular;
+  font-size: 12px;
+  color: #3C3B49;
+  letter-spacing: 0.33px;
+  line-height: 1.3;
+  width: 70%;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+/* COLOR CHANGING NOT WORKING FOR SOME REASON - defaulting to pink */
+.addLinks a {
+  font-family: SofiaProBold !important;
+  font-size: 16px !important;
+  color: #333340 !important;
+  letter-spacing: 0.53px !important;
+  line-height: 1.4 !important;
+  text-decoration: none;
+  border-bottom: 2px solid #333340;
+  transition: ease .25s;
+}
+
+.addLinks a:hover {
+  color: #514AD7 !important;
+  border-bottom: 2px solid #514AD7;
+  transition: ease .25s;
+}
+
+/* SLIDE SHOW NAV - default not showing up */
+.slideShowNavigation {
+  height: 50px;
+  width: 100%;
+  background-color: yellow;
+}
+.navDot {
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline;
+}
+
+.one {
+  background-color: green;
+}
+
+@media screen and (max-width: 550px) {
+  .longDescription {
+    width: 100%;
+  }
+}
+
+.slickDots {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.slickDots li button:before {
+  font-size: 11px;
+  color: #3E33B7 !important;
+}
+
+.slickDots li.slick-active button:before {
+  color: #3E33B7 !important;
+}
+
+.arrow {
+  color: rgba(255, 0, 0, 0.87);
+  height: 36px;
+  width: 36px;
+  right: -36px;
+}

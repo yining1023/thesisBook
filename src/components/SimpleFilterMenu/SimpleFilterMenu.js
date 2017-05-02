@@ -1,10 +1,8 @@
 import React from 'react'
 import s from './SimpleFilterMenu.css'
 import {connect} from 'react-redux'
-import {advisorsIds} from '../../constants/advisorIds'
 import {resetSearch, search, setAdvisorFilter, setCategoryFilter} from '../../redux/actions/filters'
 import {getFilteredProjects} from '../../redux/selectors/projects'
-import {TextField, SelectField, MenuItem} from 'material-ui'
 import {Link} from 'react-router-dom'
 import {debounce} from 'lodash'
 

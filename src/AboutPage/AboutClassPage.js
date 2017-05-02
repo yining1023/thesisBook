@@ -1,11 +1,12 @@
 import React from 'react'
 // import {html} from './aboutClassindex.md'
+import s from './styles.css'
 
 export const AboutClassPage = () => {
   return (
     // {/*<div dangerouslySetInnerHTML={{ __html: html }} />*/}
     <div>
-      <img src="https://itp.nyu.edu/thesis2016/wp-content/uploads/2016/04/ITP-Class-2016.png" alt="itp thesis class 2017" style={{ width: '800px', marginLeft: '48px' }} />
+      <img className={s.classPhoto} src="https://itp.nyu.edu/thesis2016/wp-content/uploads/2016/04/ITP-Class-2016.png" alt="itp thesis class 2017" />
 
       <p>Dear Class of 2016</p>
 

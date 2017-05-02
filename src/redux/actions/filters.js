@@ -13,7 +13,7 @@ export const setCategoryFilter = category => ({
 
 export const search = keyword => dispatch => {
   dispatch(getSearchRequestAction())
-  return axios.get(`https://itp.nyu.edu/ranch/proxy/proxy.php?mode=native&url=https://itp.nyu.edu/thesis2016/wp-content/themes/itpthesis/api2.php?search=${keyword}`)
+  return axios.get(`https://itp.nyu.edu/ranch/proxy/proxy.php?mode=native&url=https://itp.nyu.edu/thesis2017/wp-content/themes/itpthesis/api.php?search=${keyword}`)
     .then(response => dispatch(getSearchSucceededAction(response.data)))
     .catch(error => dispatch(getSearchFailedAction(error)))
 }

@@ -22,13 +22,13 @@
 }
 
 .title {
-  width: 70px;
+  width: 60px;
   margin: 25px 20px 0 10px;
 }
 
 .header {
   display: flex;
-  background-color: #403ca0;
+  background-color: rgba(0,0,0,0); /*#403ca0;*/
   box-shadow: none;
   color: white;
   z-index: 3;
@@ -39,5 +39,6 @@
 }
 
 .searchBox {
+  font-family: SofiaProBold!important;
   color: white !important;
 }

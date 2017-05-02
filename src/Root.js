@@ -15,7 +15,7 @@ class Root extends React.Component {
 
   render() {
     return (
-      <Router>
+      <Router basename='/thesis2017'>
         <div className={s.container}>
           <Switch>
             <Route exact path='/' component={HomePage} />
