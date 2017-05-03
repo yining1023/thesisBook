@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import s from './Header.css'
 import FilterMenu from '../FilterMenu/FilterMenu'
-import logo from '../../img/itp-logo.svg'
+import logo from '../../img/itp-logo-tisch.svg'
 import {Drawer, IconButton} from 'material-ui'
 import MenuIcon from 'material-ui/svg-icons/navigation/menu'
 
