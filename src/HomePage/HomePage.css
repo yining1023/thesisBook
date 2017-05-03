@@ -52,7 +52,7 @@
 }
 
 .projectQuestionContainer {
-  flex-grow: 1;
+
   width: 100%;
   text-align: center;
   color: white;
@@ -61,15 +61,11 @@
 
 .hoveredTitle {
   font-family: Source Serif Pro;
-  font-size: 3.5rem;
-  line-height: 1.2;
-  vertical-align: middle;
   text-align: center;
-  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
   transition: all 0.5s ease;
-  margin-top: 20px;
+  /*more styles below depending on screen size*/
 }
 
 .appear {
@@ -84,6 +80,7 @@
   color: rgba(255, 255, 255, 0.4);
   letter-spacing: 1.1px;
   margin-top: 25px;
+  text-align: center;
   /*height: 20px;*/
 }
 
@@ -104,27 +101,32 @@
   font-weight: 500;
 }
 
-@media screen and (min-width: 1300px) {
-  .projectQuestion {
-    /*font-size: 42px !important;*/
-  }
-}
-
-@media screen and (max-height: 770px) {
-  .hoveredTitle {
-    /*font-size: 2.7rem;*/
-    font-size: 5rem;
-  }
-  .hoveredSubtitle {
-    font-size: 1.1rem;
-  }
-}
 
 @media screen and (max-height: 720px) {
   .hoveredTitle {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    margin-top: 5%;
+    line-height: 1.3;
+    max-width: 85%;
+    /*background: green;*/
   }
   .hoveredSubtitle {
     font-size: 1.1rem;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-height: 660px) {
+  .hoveredTitle {
+    font-size: 1.5rem;
+    max-width: 80%;
+    margin-top: 7%;
+    letter-spacing: 1.2;
+    line-height: 1.3;
+    /*background: purple;*/
+  }
+  .hoveredSubtitle {
+    font-size: 1.1rem;
+    line-height: 1.2;
   }
 }

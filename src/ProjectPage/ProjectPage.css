@@ -38,13 +38,20 @@
   line-height: 1.2;
 }
 
-.topicIcon {
+.topicIconContainer {
   width: 72px;
   height: 72px;
   border:3px solid #EBFF32;
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.topicIcon {
+  width: 36px !important;
+  position: relative;
+  top: 35%;
+  transform: translateY(-50%);
 }
 
 .projectTitle {

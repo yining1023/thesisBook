@@ -60,6 +60,7 @@ class HomePage extends React.Component {
     this.setState({
       projectHeading: project.project_question,
       projectTopics: topics,
+      studentName: project.student_name
     })
   }
 
@@ -91,6 +92,7 @@ class HomePage extends React.Component {
               <div className={s.hoveredTitle} dangerouslySetInnerHTML={{ __html: this.state.projectHeading}}>
                 {/*{this.state.projectHeading}*/}
               </div>
+
               <div className={s.hoveredSubtitle}>
                 {this.state.projectTopics}
               </div>

@@ -91,8 +91,8 @@ class ProjectPage extends React.Component {
 
         <div className={s.greyHeader}>
 
-          <div className={`${s.topicIcon}`}>
-            <img src={require(`../img/${(get(project, 'topics.0.slug') !== '') ? get(project, 'topics.0.slug') : 'education'} copy.svg`)} alt={"topic-icon"} style={iconStyles} color="#292755" />
+          <div className={`${s.topicIconContainer}`}>
+            <img className={s.topicIcon} src={require(`../img/${(get(project, 'topics.0.slug') !== '') ? get(project, 'topics.0.slug') : 'education'} copy.svg`)} alt={"topic-icon"} style={iconStyles} color="#292755" />
           </div>
           <h3 className={s.projectTitle} dangerouslySetInnerHTML={{ __html: project.project_title}}/>
           <h4 className={s.studentName}>{project.student_name}</h4>
@@ -134,8 +134,6 @@ class ProjectPage extends React.Component {
               adaptiveHeight={true}
               pauseOnHover={true}
               autoplaySpeed={5000}
-              prevArrow={<ArrowLeft />}
-              nextArrow={<ArrowRight />}
               slidesToShow={1}
               slidesToScroll={1}
               swipe
