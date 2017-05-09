@@ -131,7 +131,6 @@ class ProjectPage extends React.Component {
               infinite={true}
               arrows={true}
               autoplay={true}
-              adaptiveHeight={true}
               pauseOnHover={true}
               autoplaySpeed={5000}
               slidesToShow={1}

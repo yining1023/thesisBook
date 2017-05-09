@@ -59,8 +59,7 @@ class HomePage extends React.Component {
 
     this.setState({
       projectHeading: project.project_question,
-      projectTopics: topics,
-      studentName: project.student_name
+      projectTopics: topics
     })
   }
 

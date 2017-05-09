@@ -160,6 +160,9 @@
   transition: ease .25s;
 }
 
+.longDescription iframe {
+  width: 100%;
+}
 
 .slideshow img {
   width: 100%;
