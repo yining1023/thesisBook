@@ -7,11 +7,11 @@ export const AboutCreditsPage = () => {
     <div>
       <p>THESIS ARCHIVE 2017 WEBSITE</p>
       <p>Katherine Dillon, Team Leader</p>
-      <p>Nancy Hechinger, Project Consultant</p>
+      <p>Nancy Hechinger, Project Consultant and Poet</p>
       <p>Rebecca S Lieberman, Designer</p>
       <p><a href="http://www.1023.io" target="_blank">Yining Shi</a>, Front-end Developer</p>
       <p>Yen Chen, Back-end Developer</p>
-      <p>Alejandro Matamala, Production Associate</p>
+      <p><a href="http://www.matamala.info" target="_blank">Alejandro Matamala</a>, Production Associate</p>
       {/*<p>PROJECT REVIEWERS</p>*/}
 
 
