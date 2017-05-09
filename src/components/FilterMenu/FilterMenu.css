@@ -6,7 +6,7 @@
   flex-direction: row;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 970px) {
   .filters {
     flex-direction: column;
   }

@@ -219,6 +219,9 @@
   .longDescription {
     width: 100%;
   }
+  .bodyContainer {
+    width: 85%;
+  }
 }
 
 .slickDots {
