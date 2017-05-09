@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import s from './SimpleHeader.css'
-import logo from '../../img/itp-logo.svg'
+import logo from '../../img/itp-logo-tisch.svg'
 import {Drawer, IconButton} from 'material-ui'
 import MenuIcon from 'material-ui/svg-icons/navigation/menu'
 import SimpleFilterMenu from '../SimpleFilterMenu/SimpleFilterMenu'

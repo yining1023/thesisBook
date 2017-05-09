@@ -47,7 +47,7 @@ class HomePage extends React.Component {
   }
 
   mapScroll(e) {
-    this.list.scrollLeft -= e.deltaX + e.deltaY
+    this.list.scrollLeft += e.deltaX + e.deltaY
     e.preventDefault()
   }
 
