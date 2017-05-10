@@ -82,7 +82,7 @@ export const AboutCreditsPage = () => {
           Katherine Dillon, Team Leader<br/>
           Nancy Hechinger, Project Consultant and Poet<br/>
           <a href="http://www.1023.io" target="_blank">Yining Shi</a>, Front-end Developer<br/>
-          Rebecca S Lieberman, Designer<br/>
+          <a href="http://www.rebeccalieberman.com" target="_blank">Rebecca Lieberman</a>, Designer<br/>
           Yen Chen, Back-end Developer<br/>
           <a href="http://www.matamala.info" target="_blank">Alejandro Matamala</a>, Production Associate<br/></p>
 

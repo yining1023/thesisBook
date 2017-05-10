@@ -135,6 +135,7 @@
 .longDescription {
   width: 80%;
   margin: 0 auto 0 auto;
+  margin-top: 40px;
   margin-bottom: 100px;
 }
 
@@ -226,7 +227,7 @@
 
 .slickDots {
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .slickDots li button:before {
